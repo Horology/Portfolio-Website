@@ -44,6 +44,7 @@ const Contacts = () => {
   }
 
   const handleSubmit = (e) => {
+    e.preventDefault();
     if( !message['firstName']||!message['lastName']||!message['email']|| !message['message']){
       setHelperMessage('One of the required inputs are not filled')
       console.log(message)
