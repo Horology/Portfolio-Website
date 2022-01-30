@@ -1,0 +1,133 @@
+//Navbar styling
+
+.navbar {
+  padding: 0 2rem;
+    width: 100%; 
+    position: fixed; 
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+    z-index: 5; 
+    background: rgb(26, 20, 54); 
+    border-bottom: .5 solid white;
+    @media screen and (min-width: 960px){
+        border-style: none;
+        background-color: transparent;
+    }
+}
+
+
+.navbar-button {
+  display: block;
+  margin: 0 1rem;
+  padding: 1rem;
+  text-align: center;
+  justify-content: center;
+  transition: width 2s, height 2s, background-color 1s, transform 1s, border .25s;
+  color:rgb(113, 107, 156);
+
+  svg{
+      display: block;
+      text-align: center;
+  }
+  &:hover{
+      color: rgba($color: #ddd6d6, $alpha: 1.0)
+  }
+}
+
+.active{
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  border-image: linear-gradient(45deg, red, blue) 1;
+  border-radius: 1rem;
+}
+
+.nav-submenu {
+    cursor: pointer;
+}
+
+.title { 
+    margin: 0 2rem;
+    text-align: center;
+    font-family: serif;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 1s ease;
+    @media screen and (min-width: 960px){
+      border-style: none;
+      color: transparent;
+  }
+
+}
+
+
+//Sidebar styling 
+@keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(-20px)
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-20px)
+    }
+  }
+
+.close-btn {
+    font-size: 2rem;
+    background: transparent;
+    border-color: transparent;
+    color: var(--clr-grey-5);
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.subbar-links-active{
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem .5rem;
+  padding-top: 3rem;
+  background: transparent;
+  position: fixed;
+  opacity: 1;
+
+
+    .sublinks{
+        padding: .5rem .5rem;
+        margin: 0rem 1rem;
+        border-radius: .5rem;
+        color: grey;
+
+    }
+    .sublinks-active{
+        padding: .5rem .5rem;
+        color: white;
+        background-color: rgba(104, 82, 231, 0.5);
+        border-radius: .5rem;
+
+    }
+}
+
+
+.active{
+    opacity: 1;
+    height: auto;
+    // animation: fade-in .25s;
+}
+.hide {
+    // animation: fade-out .1s;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}

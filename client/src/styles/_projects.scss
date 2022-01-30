@@ -1,0 +1,68 @@
+@mixin flex-box{
+    padding: 0rem;
+    margin: 1.5rem;
+    padding-bottom: 1rem;
+    background: rgba(gray,.5);
+    ul{
+        list-style-type: square;
+    }
+    li{
+        text-align: left;
+    }
+    h3{
+        background: gray;
+    }
+
+    span{
+        color: blue;
+    }
+}
+
+.project-container{
+    
+    display: flex;
+    padding: 2rem;
+    flex-direction: row;
+    height: 900px;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin: 2rem auto;
+    margin-top: 5rem;
+
+    @media screen and (max-width: 800px){
+        display: block;
+        width: 100%;
+        left: 50%;
+
+    }
+    .project{
+        display: block;
+        margin: 2rem 2rem;
+        height: 40%;
+        font-size: 4rem;
+        background-color: grey;
+        border-radius: 1rem;
+        text-align: center;
+        color: white;
+        transition: -webkit-transform .3s;
+        transition: transform .3s;
+        transition: transform .3s,-webkit-transform .3s;
+        width: 100%;
+        overflow: hidden;
+        object-fit: cover;
+        @media screen and (min-width: 800px){
+            width: 50%;
+    
+        }
+        &:hover{
+            transform: translateY(-10px);
+            opacity: .9;
+
+        }
+        img{
+            max-width: none;
+            margin: 0;
+        }
+    }
+}

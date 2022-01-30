@@ -1,0 +1,84 @@
+@import '_variables';
+
+*, ::after, ::before {
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box; 
+    transition: var(--transition);
+    text-decoration: none;
+    user-select: none;
+
+}
+
+p {
+    color: white;
+    margin: 0; 
+}
+
+
+.title-header {
+    color: white;
+    text-align: center;
+    padding: .25rem;
+    padding-left: 1rem; 
+    margin-top: 3rem;
+    font-family: serif; 
+    border-top: .5rem solid white;
+    border-bottom: .5rem solid white;
+    width: 50vw;
+    opacity: .65;
+}
+
+.responsive{
+    display: block;
+    position: relative;
+    margin-top: 10rem;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+
+    @media screen and (min-width:800px){
+        display: flex;
+    }
+}
+
+.half{
+    text-align:center;
+
+    @media screen and (min-width:800px){
+        text-align: left;
+        padding-left: 4rem;
+        width: 50%;
+    }
+}
+
+.img-container{
+    max-width: 90%;
+    border-radius: 50px;
+    margin: 0;
+    margin-top: .5rem;
+    border: .25rem solid rgb(148, 116, 58);
+}
+
+.transition{
+    transition: width 2s, height 2s, background-color 1s, transform 1s;
+}
+
+button {
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+.bigger-space {
+    margin: 0 1.25rem;
+}
+
+.justify .left {
+    display: flex;
+    justify-content:left;
+    p{
+        justify-content:left;  
+    }
+}
+.contact-margin {
+    padding: 3rem 0; 
+}
