@@ -10,18 +10,18 @@ import GoogleIcon from './GoogleIcon';
 import HTMLIcon from './HTMLIcon';
 import MongoDBIcon from './MongoDBIcon';
 import MUIIcon from './MUIIcon';
-import NextIcon from './NextIcon';
+// import NextIcon from './NextIcon';
 import NodeJSIcon from './NodeJSIcon';
-import PhotoShopIcon from './PhotoShopIcon';
+// import PhotoShopIcon from './PhotoShopIcon';
 import PythonIcon from './PythonIcon';
 import ReactIcon from './ReactIcon';
 import SassIcon from './SassIcon';
-import SocketIOIcon from './SocketIOIcon';
+// import SocketIOIcon from './SocketIOIcon';
 import TypeScriptIcon from './TypeScriptIcon';
-import BlenderIcon from './BlenderIcon';
+// import BlenderIcon from './BlenderIcon';
 import StackOverflowIcon from './StackOverflowIcon';
-import AutoCADIcon from './AutoCADIcon';
-import SolidWorksIcon from './SolidWorksIcon';
+// import AutoCADIcon from './AutoCADIcon';
+// import SolidWorksIcon from './SolidWorksIcon';
 
 const size = 80
 
@@ -31,7 +31,7 @@ export const data = [
         id:1,
         icon: <HTMLIcon size={size}/>,
         description: 'HTML',
-        notes: 'Learned HTML 4 years ago to create a small static website',
+        notes: 'Learned HTML 4 years ago to build small static websites',
     },
     {
         id:2,
@@ -43,7 +43,7 @@ export const data = [
         id:3,
         icon: <JavascriptIcon size={size} />,
         description: 'JavaScript',
-        notes: 'Learned Javascript to create interactive web elements',
+        notes: 'Using Javascript to create interactive web elements',
     },
     {
         id:4,
@@ -55,25 +55,25 @@ export const data = [
         id:5,
         icon: <NodeJSIcon size={size} />,
         description: 'Nodejs',
-        notes: 'Learned AJAX and various packages, such as Stripe.io and Socket.io',
+        notes: 'Used various NPM packages, such as Auth0, Stripe.io and Socket.io',
     },
     {
         id:6,
         icon: <ReactIcon size={size} />,
         description: 'React',
-        notes: ' Created many interactive websites with React. Have the most experience with it compared to other languages that I currently know',
+        notes: ' Created many interactive websites with React, including but not limited to, an online shopping platform and employment database management system',
     },
     {
         id: 7,
         icon: <GithubIcon size={size} />,
         description: 'Github',
-        notes: 'Have a basic understanding of workflow with Git',
+        notes: 'Use Git to store web applications on Github',
     },
     {
         id: 8,
         icon: <TypeScriptIcon size={size} />,
         description: 'Typescript',
-        notes: ' Learned the basics with Typescript and can apply it to React components if needed.',
+        notes: 'Using Typescript to improve codebase and limit deployment errors',
     },
     {
         id: 9,
@@ -85,19 +85,19 @@ export const data = [
         id: 10,
         icon: <TailwindIcon size={size} />,
         description: 'Tailwind',
-        notes: 'Provides me a quick and easy way of prototyping websites',
+        notes: 'Provides me a quick and easy way of prototyping websites with its quick styling methods',
     },
     {
         id: 11,
         icon: <ExpressIcon size={size} />,
         description: 'Express',
-        notes: 'Can create a server with routes to connect to databases and client-side',
+        notes: 'Use Express to create servers connecting to mySQL and MongoDB and interacting with the client-side',
     },
     {
         id: 12,
         icon: <GatsbyIcon size={size} />,
         description: 'Gatsby',
-        notes: 'Have create a basic website with Gatsby',
+        notes: 'Initially used Gatsby to create a basic website',
     },
     {
         id: 13,
@@ -109,13 +109,13 @@ export const data = [
         id: 14,
         icon: <MongoDBIcon size={size} />,
         description: 'MongoDB',
-        notes: 'Have a basic understanding of using databases',
+        notes: 'Using Mongo to store messaged submitted through the web portfolio',
     },
     {
         id: 15,
         icon: <MUIIcon size={size} />,
         description: 'MUI',
-        notes: 'Provides me a quick and easy way of prototyping interactive components with Theme providers and interactive forms',
+        notes: 'A quick and easy way of prototyping responsive components. Have customized them with Theme providers as well',
     },
     // {
         //     id: 17,
