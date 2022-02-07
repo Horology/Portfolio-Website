@@ -4,9 +4,9 @@ import pageLinks from '../constants/links.js';
 import {FaCaretDown, FaCaretUp} from 'react-icons/fa'; 
 import {useDispatch} from 'react-redux';
 import {toggleMenu} from '../actions/posts';
-import Submenu from './Submenu';
 import {default as Logo} from '../img/profile.jpg';
 import { HashLink as Link } from 'react-router-hash-link';
+import Submenu from './Submenu';
 
 
 const Navbar = () => {
