@@ -6,7 +6,7 @@ import {useDispatch} from 'react-redux';
 import {toggleMenu} from '../actions/posts';
 import {default as Logo} from '../img/profile.jpg';
 import { HashLink as Link } from 'react-router-hash-link';
-import Submenu from './Submenu';
+import Submenu from './submenu.js';
 
 
 const Navbar = () => {
