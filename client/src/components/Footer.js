@@ -1,11 +1,7 @@
-import React, { useRef, useEffect, useState } from "react"
+import React from "react"
 import socialLinks from '../constants/social_links';
 
-
-
-
-const Footer = React.forwardRef((props, ref) => {
-
+const Footer = React.forwardRef(({ref}) => {
 
     return(
         <footer className = "footer">

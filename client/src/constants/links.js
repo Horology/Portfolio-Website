@@ -2,9 +2,6 @@ import React from 'react';
 import { FaHome, FaPortrait, FaPhone, FaPencilRuler, FaPaintBrush, FaCode} from 'react-icons/fa'; 
 import {GiTalk} from 'react-icons/gi';
 
-function myMoveFunction() {
-  document.getElementById("demo").innerHTML = 1;
-}
 
 const data = [
     {
@@ -16,20 +13,20 @@ const data = [
     {
       id: 2,
       text: "About",
-      url: "/about/",
+      url: "/#about",
       icon: <FaPortrait size={45}/>,
     },
     {
       id: 3,
       text: "Contacts",
-      url: "/contacts/",
+      url: "contacts",
       icon: <GiTalk size={45}/>,
 
     },
     {
       id: 4,
       text: "Projects",
-      url: "/projects/",
+      url: "projects",
       icon: <FaPencilRuler size={45}/>,
       type:{
         art:<FaPaintBrush size={30}/>,

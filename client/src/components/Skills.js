@@ -22,7 +22,7 @@ const Skills = () => {
                     {data.map((logo) => {
                         return(
                             <button key = {logo.id} dataset = {logo.id} 
-                            onMouseEnter = {() => {displayDescription(logo.id)}}
+                            onClick = {() => {displayDescription(logo.id)}}
                             disabled = {disable}>
                                 {logo.icon}
                             </button>)

@@ -1,33 +1,163 @@
 @import '_variables';
 
-.span-text {
-    color: var(--highlighted-text);
-    display: inline-block;
-    padding: 0 .25rem;
-    margin-bottom: 2rem;
+.image-container {
+    height: 20em;
+    background: black;
+}
 
-    &:hover {
-        background-color: var( --highlighted-background);
-        border-radius: .5rem;
+// running Pikachu
+.scroll-left {
+    position: relative;
+    overflow: hidden;
+    height: 80px;
+}
+.scroll-left >  div { 
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    height: 100px;
+
+    transform:translateX(100%);
+    animation: scroll-left 10s linear infinite; 
+    img{
+        transform: scaleX(-1);
+        width: 100px;
+    }
+    &:hover{
+        animation-play-state: paused;
     }
 }
+
+.contact-link{
+    position: absolute;
+    margin: 1.5rem;
+    border-radius: .5rem;
+    background-color: var(--primary-text-color);
+    color:var(--blue-text-hover);
+    padding: .25rem 1rem;
+    margin-bottom: .25rem;
+    a {
+        color:var(--blue-text-hover);
+    }
+}
+
+@keyframes scroll-left { 
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+//staircase for introduction purposes
+
+.staircase:nth-child(n) { 
+    text-align: left;
+    color: var(--primary-text-color2);
+}
+@media (max-width: 500px) {
+div {
+    margin-left: 0 !important;     
+}
+}
+.social-links { 
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    .links {
+        svg { 
+            margin: .5rem;
+            width: 2rem;
+            height: 100%;
+            color: var(--primary-text-color2);
+            transition: all .3s;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            &:hover {
+                color:var(--blue-text-hover);
+                &:before {
+                    width: 100%;
+            }
+        }
+        }
+        
+    }
+}
+        
+.red-btn-container{
+    display: flex;
+    margin-left: 0; 
+    text-align: left;
+    margin: 1rem 0;
+    font-size: .75rem;
+
+    button {
+        display: block;
+        padding: 1rem;
+        margin-right: .25rem;
+        color: var(--blue-text-background-hover);
+        font-family: ff-secondary;
+        font-weight: bold;
+        font-size: 1.5rem;
+        border: 2px solid var(--blue-text-background-hover);
+        text-align: center;
+        position: relative;
+        transition: all .35s;
+        span{
+            position: relative;
+            z-index: 2;
+        }
+        &:after{
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: var(--blue-text-background-hover);
+            transition: all .35s;
+        }
+        
+        &:hover{
+            color: #fff;
+            transform: rotate(0.0625turn);
+        }
+        
+        &:hover:after{
+            width: 100%;
+        }
+    }
+    > span{
+        align-self: end;
+        margin-left: .25rem;
+        color: var(--blue-text-background-hover)
+    }
+    @media screen and (min-width: 768px) {
+        font-size: 1rem;
+    }
+}
+
 
 .life-motto {
     position: relative;
     margin: auto;
     background-color: var( --highlighted-background);
     opacity: .75;
-    color: var(--highlighted-text);
+    color: var(--highlighted-text-hover);
     border-radius: .5rem;
     padding: 1rem 2rem;
-    width: 50%;
+    width: 75%;
     &::before {
         position: absolute;
         transform: rotate(-45deg);
         font-family: "Lucida Console", "Courier New";
         content: "Status";
         background-color: rgba(yellow, 0.7);
-        color: white;
+        color: var(--blue-text);
         border-radius: .5rem;
         padding: .25rem 2rem;
         width: auto;
@@ -39,9 +169,10 @@
 }
 
 .introduction {
-    text-align: left;
-    width: 75%; 
-    color: white;
+    padding: 50px;
+    text-align: center;
+    background-color: #e0fcff;
+    color: black;
     h5{
         opacity: .8;
     }
@@ -52,9 +183,21 @@
 .context {
     margin: 1rem;
     margin-top: 5rem;
+    color: black;
     p {
-        
         margin: 0;
+    }
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    > p {
+        padding: .25rem 1rem;
+        background-color: var(--blue-text-hover);
+        color: grey;
+        border-radius: .25rem;
+
     }
 }
 
@@ -70,19 +213,17 @@
     }
 }
 
-.img-container {
+.img-container{
+    max-width: 90%;
+    border-radius: 50px;
+    margin: 0;
+    margin-top: .5rem;
+    border: .25rem solid rgb(148, 116, 58);
     position: relative;
-    
-
 }
 
-
-
 .skills-outer-container {
-    background:linear-gradient(to bottom, rgba(255,255,255,0.25) , lightgrey );
-
-    color: white;
-    margin: 5rem 5rem;
+    color: 102a42;
     border-radius: 2rem;
     padding: 2rem;
     @media only screen and (max-width: 1200px) {
@@ -98,6 +239,8 @@
 
 .outer-outer-container {
     position: relative;
+    background-color: #f5f5f5;
+    // #fffaeb; 
 }
 
 .skills-container {
@@ -166,17 +309,18 @@
     width: 10rem;
     background: rgba(255,255,255,0.85);
     z-index: index 6;;
-    color: black;
+    color: var(--primary-text-color);
     padding: 3rem;
     width: 50%;
     height: 50%;
+    margin: 0;
     border-radius: 3REM;
     p {
-        color: black;
         margin: auto;
         margin-top: 5rem;
     }
     svg {
-        width: 15rem;
+        width: 5rem;
+        height: 5rem;
     }
 }

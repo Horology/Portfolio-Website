@@ -1,19 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Main from './Main';
-import {BrowserRouter} from 'react-router-dom';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 import postsReducer from './reducers/posts';
 import './dist/index.css';
-
-// const store = createStore(postsReducer, compose(applyMiddleware(thunk)));
+import {HashRouter, Routes ,Route, Link } from 'react-router-dom';
 const store = createStore(postsReducer);
 ReactDOM.render(
     <Provider store = {store}>
-        <BrowserRouter >
+        <HashRouter hashType = {"noslash"} >
             <Main title = " Hou's Porfolio Website"/>
-        </BrowserRouter>
+        </HashRouter>
     </Provider>,
     document.getElementById('root')
 );

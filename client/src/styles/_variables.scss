@@ -7,12 +7,17 @@ Variables
 */
 
 :root {
-    /* dark shades of primary color*/
-    --clr-primary-1: hsl(185, 91%, 17%);
-    --clr-primary-2: hsl(185, 84%, 25%);
 
-    /* primary/main color */
-    --clr-primary-5: hsl(185, 62%, 45%);
+    /* Blue Text color */ 
+    --blue-text: rgb(10, 10, 83);
+    --blue-text-hover: #bff8fd;
+    --blue-text-background: rgba(104, 82, 231, 0.25);
+    --blue-text-background-hover: rgba(82, 11, 139, 0.5);
+    /* primary color */
+    --primary-text-color:#122e47;
+    --primary-text-color2:#2d327a;
+    /* span text */
+    --span-text: orange ; 
     /* lighter shades of primary color */
     --clr-primary-6: hsl(185, 57%, 50%);
     --clr-primary-7: hsl(184, 65%, 59%);
@@ -24,14 +29,10 @@ Variables
     /* grey used for paragraphs */
     --clr-grey-5: hsl(210, 22%, 49%);
     /* responsive text colors*/
-    --highlighted-text:rgba(192, 228, 168, 1);
+    --highlighted-text:rgb(153, 197, 22);
+    --highlighted-text-hover:rgb(246, 255, 224);
     --highlighted-background: rgba(126, 137, 173, 0.5);
     // Variables not in use at the moment
-    --clr-grey-10: #f1f5f8;
-    --clr-white: #fff;
-    --clr-red-dark: hsl(360, 67%, 44%);
-    --clr-red-light: hsl(360, 71%, 66%);
-    --clr-green-dark: hsl(125, 67%, 44%);
     --clr-green-light: hsl(125, 71%, 66%);
     --clr-black: #222;
     --ff-primary: 'Roboto', sans-serif;

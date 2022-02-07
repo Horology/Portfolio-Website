@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { Routes ,Route, Link } from 'react-router-dom';
-import { Container, AppBar} from '@material-ui/core';
+import {HashRouter, Routes ,Route, Link } from 'react-router-dom';
+import { AppBar} from '@material-ui/core';
 import About from './pages/About.js';
 import Contacts from './pages/Contacts.js';
 import Home from './pages/Home.js';
@@ -35,9 +35,6 @@ import pageLinks from './constants/links.js';
     return [containerRef, isVisible]
   }
 
-
-
-
 const Main = () => {
 
     const [ containerRef, isVisible ] = useElementOnScreen({
@@ -50,16 +47,6 @@ const Main = () => {
     const showMenu = useSelector((state) =>state.showMobileMenu);
     const [value, setValue] = useState(1);
 
-    let pages = (
-    <Routes>
-        <Route path = "/*" element = {<Home isVisible ={isVisible}/>}/> 
-        <Route path = "/about/" element = {<About/>}/>
-        <Route path = "/contacts/" element = {<Contacts/>}/>
-        <Route path = "/art/" element = {<Art/>}/>
-        <Route path = "/code/" element = {<Code/>}/>
-        <Route path = "/projects/" element = {<Projects/>}/>
-    </Routes>
-    );
 
     return (
         <>
@@ -74,7 +61,12 @@ const Main = () => {
                         )
                     })}
                 </div>
-                {pages}
+                  <Routes>
+                    <Route path = "/*" element = {<Home isVisible ={isVisible}/>}/> 
+                    <Route path = "/contacts" element = {<Contacts/>}/> 
+                    <Route path = "/art/" element = {<Art/>}/>
+                    <Route path = "/code/" element = {<Code/>}/>
+                  </Routes>
             </AppBar>
 
             <Footer ref={containerRef} />

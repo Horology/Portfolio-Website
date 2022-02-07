@@ -74,9 +74,9 @@ const Contacts = () => {
 
     return(
       <ThemeProvider theme = {theme}>
-              <div className = ' contact margin'  align = 'center' style={{ background: 'linear-gradient(to bottom, #271c33, #174522)', paddingTop:'5rem'}}>
+              <div className = ' contact margin' style={{ background: 'skyblue', paddingTop:'5rem'}}>
               <Container>
-                <h1 className = 'title-header' >Contact Form </h1>
+                <h1 className = 'title-header-white' >Contact Form </h1>
                 <Box component="form" noValidate sx={{ mt: 3 }} style = {{marginTop: '4rem'}}>
                   <Grid container spacing={7} >
                     <Grid item xs={12} sm={6} >
@@ -142,7 +142,6 @@ const Contacts = () => {
                       Sent Message
                       </Button>
                   </Grid>
-                  {/* <div className = 'helper-text'>{helperMessage}</div> */}
                 </Box>
               </Container>
             </div>  

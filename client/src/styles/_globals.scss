@@ -10,29 +10,41 @@
 
 }
 
+body { 
+    overflow: hidden;
+}
+
 p {
-    color: white;
+    color: #617d98;
     margin: 0; 
 }
 
 
 .title-header {
-    color: white;
+    color: var(--primary-text-color);
     text-align: center;
     padding: .25rem;
-    padding-left: 1rem; 
     margin-top: 3rem;
     font-family: serif; 
-    border-top: .5rem solid white;
-    border-bottom: .5rem solid white;
-    width: 50vw;
-    opacity: .65;
+    border-top: .5rem solid var(--primary-text-color);
+    border-bottom: .5rem solid var(--primary-text-color);
 }
+
+.title-header-white {
+    color:lightgrey;
+    text-align: center;
+    padding: .25rem;
+    margin-top: 3rem;
+    font-family: serif; 
+    border-top: .5rem solid lightgrey;
+    border-bottom: .5rem solid lightgrey;
+}
+
 
 .responsive{
     display: block;
     position: relative;
-    margin-top: 10rem;
+    margin-top: 3rem;
     transition: width 2s, height 2s, background-color 2s, transform 2s;
 
     @media screen and (min-width:800px){
@@ -50,12 +62,18 @@ p {
     }
 }
 
-.img-container{
-    max-width: 90%;
-    border-radius: 50px;
-    margin: 0;
-    margin-top: .5rem;
-    border: .25rem solid rgb(148, 116, 58);
+
+.span-text {
+    color: var(--highlighted-text);
+    display: inline-block;
+    padding: .25rem .5rem;
+    margin-bottom: 2rem;
+
+    &:hover {
+        background-color:var(--highlighted-background);
+        color:var(--highlighted-text-hover);
+        border-radius: .5rem;
+    }
 }
 
 .transition{
@@ -66,6 +84,25 @@ button {
     padding: 0;
     border: none;
     background: none;
+    cursor: pointer;
+}
+
+// Styling for custom button 
+.custom-btn { 
+    background-color:var(--blue-text-background);
+    color:var(--blue-text);
+    border-radius: .5rem;
+    padding: .25rem 1.25rem;
+    &:hover{
+        background-color:var(--blue-text-background-hover);
+        color:var(--blue-text-hover);
+
+    }
+    &:active{
+        background-color:var(--blue-text-background);
+        color:var(--blue-text);
+        opacity: .5;
+    }
 }
 
 .bigger-space {
@@ -80,5 +117,6 @@ button {
     }
 }
 .contact-margin {
-    padding: 3rem 0; 
+    padding: 10rem 0; 
+
 }
