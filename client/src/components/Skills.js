@@ -17,7 +17,7 @@ const Skills = () => {
     return (
         <div className="outer-outer-container">
             <div className=" skills-outer-container" >
-                <h2> Languages </h2>
+                <h2> Languages & Skills </h2>
                 <div className = {show?'skills-container lighter':'skills-container'}>
                     {data.map((logo) => {
                         return(

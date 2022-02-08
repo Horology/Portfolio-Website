@@ -17,9 +17,13 @@
         color: blue;
     }
 }
+
+.projects-background{
+    background-color: var(--background-color2);
+}
 .projects-container { 
     padding: 50px;
-    background-color: #2E3B55;
+    max-width: var(--max-width);
 }
 
 .project-container{

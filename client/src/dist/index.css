@@ -13,25 +13,23 @@ Variables
   --blue-text-background: rgba(104, 82, 231, 0.25);
   --blue-text-background-hover: rgba(82, 11, 139, 0.5);
   /* primary color */
-  --primary-text-color:#122e47;
-  --primary-text-color2:#2d327a;
+  --primary-text-color:#160f29;
+  --primary-text-color2:#246a73;
+  --background-color: #D4F1F4;
+  --background-color2: #e0fcff;
+  --background-color3: #368F8B;
+  /* secondary color */
+  --secondary-color: #DDBEA8;
+  --secondary-color2: #F3DFC1;
+  --secondary-color3: #75E6DA;
   /* span text */
   --span-text: orange ;
-  /* lighter shades of primary color */
-  --clr-primary-6: hsl(185, 57%, 50%);
-  --clr-primary-7: hsl(184, 65%, 59%);
-  /* darkest grey - used for headings */
-  --clr-grey-1: hsl(209, 61%, 16%);
-  --clr-grey-2: hsl(211, 39%, 23%);
-  --clr-grey-3: hsl(209, 34%, 30%);
-  --clr-grey-4: hsl(209, 28%, 39%);
   /* grey used for paragraphs */
   --clr-grey-5: hsl(210, 22%, 49%);
   /* responsive text colors*/
   --highlighted-text:rgb(153, 197, 22);
   --highlighted-text-hover:rgb(246, 255, 224);
   --highlighted-background: rgba(126, 137, 173, 0.5);
-  --clr-green-light: hsl(125, 71%, 66%);
   --clr-black: #222;
   --ff-primary: 'Roboto', sans-serif;
   --ff-secondary: 'Open Sans', sans-serif;
@@ -178,25 +176,23 @@ Variables
   --blue-text-background: rgba(104, 82, 231, 0.25);
   --blue-text-background-hover: rgba(82, 11, 139, 0.5);
   /* primary color */
-  --primary-text-color:#122e47;
-  --primary-text-color2:#2d327a;
+  --primary-text-color:#160f29;
+  --primary-text-color2:#246a73;
+  --background-color: #D4F1F4;
+  --background-color2: #e0fcff;
+  --background-color3: #368F8B;
+  /* secondary color */
+  --secondary-color: #DDBEA8;
+  --secondary-color2: #F3DFC1;
+  --secondary-color3: #75E6DA;
   /* span text */
   --span-text: orange ;
-  /* lighter shades of primary color */
-  --clr-primary-6: hsl(185, 57%, 50%);
-  --clr-primary-7: hsl(184, 65%, 59%);
-  /* darkest grey - used for headings */
-  --clr-grey-1: hsl(209, 61%, 16%);
-  --clr-grey-2: hsl(211, 39%, 23%);
-  --clr-grey-3: hsl(209, 34%, 30%);
-  --clr-grey-4: hsl(209, 28%, 39%);
   /* grey used for paragraphs */
   --clr-grey-5: hsl(210, 22%, 49%);
   /* responsive text colors*/
   --highlighted-text:rgb(153, 197, 22);
   --highlighted-text-hover:rgb(246, 255, 224);
   --highlighted-background: rgba(126, 137, 173, 0.5);
-  --clr-green-light: hsl(125, 71%, 66%);
   --clr-black: #222;
   --ff-primary: 'Roboto', sans-serif;
   --ff-secondary: 'Open Sans', sans-serif;
@@ -219,6 +215,7 @@ html {
 
 body {
   margin: 0;
+  background-color: var(--background-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: rgba(0, 0, 0, 0.8);
@@ -877,25 +874,23 @@ Variables
   --blue-text-background: rgba(104, 82, 231, 0.25);
   --blue-text-background-hover: rgba(82, 11, 139, 0.5);
   /* primary color */
-  --primary-text-color:#122e47;
-  --primary-text-color2:#2d327a;
+  --primary-text-color:#160f29;
+  --primary-text-color2:#246a73;
+  --background-color: #D4F1F4;
+  --background-color2: #e0fcff;
+  --background-color3: #368F8B;
+  /* secondary color */
+  --secondary-color: #DDBEA8;
+  --secondary-color2: #F3DFC1;
+  --secondary-color3: #75E6DA;
   /* span text */
   --span-text: orange ;
-  /* lighter shades of primary color */
-  --clr-primary-6: hsl(185, 57%, 50%);
-  --clr-primary-7: hsl(184, 65%, 59%);
-  /* darkest grey - used for headings */
-  --clr-grey-1: hsl(209, 61%, 16%);
-  --clr-grey-2: hsl(211, 39%, 23%);
-  --clr-grey-3: hsl(209, 34%, 30%);
-  --clr-grey-4: hsl(209, 28%, 39%);
   /* grey used for paragraphs */
   --clr-grey-5: hsl(210, 22%, 49%);
   /* responsive text colors*/
   --highlighted-text:rgb(153, 197, 22);
   --highlighted-text-hover:rgb(246, 255, 224);
   --highlighted-background: rgba(126, 137, 173, 0.5);
-  --clr-green-light: hsl(125, 71%, 66%);
   --clr-black: #222;
   --ff-primary: 'Roboto', sans-serif;
   --ff-secondary: 'Open Sans', sans-serif;
@@ -989,7 +984,7 @@ Variables
 }
 
 .social-links .links svg:hover {
-  color: var(--blue-text-hover);
+  color: var(--secondary-color);
 }
 
 .social-links .links svg:hover:before {
@@ -1060,7 +1055,7 @@ Variables
   margin: auto;
   background-color: var(--highlighted-background);
   opacity: .75;
-  color: var(--highlighted-text-hover);
+  color: var(--primary-text-color2);
   border-radius: .5rem;
   padding: 1rem 2rem;
   width: 75%;
@@ -1084,8 +1079,7 @@ Variables
 .introduction {
   padding: 50px;
   text-align: center;
-  background-color: #e0fcff;
-  color: black;
+  max-width: var(--max-width);
 }
 
 .introduction h5 {
@@ -1109,8 +1103,8 @@ Variables
 
 .flex > p {
   padding: .25rem 1rem;
-  background-color: var(--blue-text-hover);
-  color: grey;
+  background-color: var(--blue-text-background);
+  color: var(--primary-text-color2);
   border-radius: .25rem;
 }
 
@@ -1139,9 +1133,10 @@ Variables
 }
 
 .skills-outer-container {
-  color: 102a42;
+  color: #246A73;
   border-radius: 2rem;
   padding: 2rem;
+  max-width: var(--max-width);
 }
 
 @media only screen and (max-width: 1200px) {
@@ -1158,7 +1153,7 @@ Variables
 
 .outer-outer-container {
   position: relative;
-  background-color: #f5f5f5;
+  background-color: var(--background-color);
 }
 
 .skills-container {
@@ -1237,7 +1232,20 @@ Variables
   width: 50%;
   height: 50%;
   margin: 0;
-  border-radius: 3REM;
+  border-radius: 3rem;
+}
+
+@media screen and (max-width: 600px) {
+  .description-container {
+    padding-right: .25rem;
+    padding-left: .25rem;
+    padding-top: 1rem;
+    margin: 0;
+    font-size: 75%;
+  }
+  .description-container h1 {
+    font-size: 200%;
+  }
 }
 
 .description-container p {
@@ -1250,9 +1258,13 @@ Variables
   height: 5rem;
 }
 
+.about-background {
+  background-color: var(--background-color2);
+}
+
 .about-container {
   padding: 50px;
-  background-color: #ffffff;
+  max-width: var(--max-width);
 }
 
 .box {
@@ -1331,7 +1343,7 @@ Variables
   --timeline-length: 15rem;
   --timeline-diff: 3rem;
   --timeline-width: calc(var(--timeline-length) - var(--timeline-diff));
-  --timeline-color:orange;
+  --timeline-color:var(--secondary-color);
   margin-top: 10rem;
 }
 
@@ -1350,7 +1362,6 @@ Variables
   color: white;
   background-position: left bottom;
   position: relative;
-  width: 100%;
   padding: 1rem;
   border-radius: .5rem;
   display: block;
@@ -1364,6 +1375,13 @@ Variables
 @media screen and (max-width: 800px) {
   .timeline .first .relative {
     width: 75%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timeline .first .relative {
+    width: 65%;
+    font-size: .75rem;
   }
 }
 
@@ -1382,6 +1400,13 @@ Variables
   background-color: var(--blue-text-background-hover);
   background-position: left bottom;
   transition: all 1s ease;
+}
+
+@media screen and (max-width: 600px) {
+  .timeline .first .relative:hover {
+    width: 80%;
+    font-size: 1rem;
+  }
 }
 
 .timeline .first .relative:hover {
@@ -1404,7 +1429,6 @@ Variables
   color: white;
   background-position: left bottom;
   position: relative;
-  width: 100%;
   padding: 1rem;
   border-radius: .5rem;
   display: block;
@@ -1416,6 +1440,13 @@ Variables
 @media screen and (max-width: 800px) {
   .timeline .second .relative {
     width: 75%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timeline .second .relative {
+    width: 65%;
+    font-size: .75rem;
   }
 }
 
@@ -1436,6 +1467,20 @@ Variables
   transition: all 1s ease;
 }
 
+@media screen and (max-width: 600px) {
+  .timeline .second .relative:hover {
+    width: 80%;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timeline .second .relative {
+    top: 1rem;
+    right: 25%;
+  }
+}
+
 .timeline .third {
   margin: 0;
   height: var(--timeline-width);
@@ -1452,7 +1497,6 @@ Variables
   color: white;
   background-position: left bottom;
   position: relative;
-  width: 100%;
   padding: 1rem;
   border-radius: .5rem;
   display: block;
@@ -1464,6 +1508,13 @@ Variables
 @media screen and (max-width: 800px) {
   .timeline .third .relative {
     width: 75%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timeline .third .relative {
+    width: 65%;
+    font-size: .75rem;
   }
 }
 
@@ -1484,9 +1535,27 @@ Variables
   transition: all 1s ease;
 }
 
+@media screen and (max-width: 600px) {
+  .timeline .third .relative:hover {
+    width: 80%;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timeline .third .relative {
+    top: 1rem;
+    left: 25%;
+  }
+}
+
+.projects-background {
+  background-color: var(--background-color2);
+}
+
 .projects-container {
   padding: 50px;
-  background-color: #2E3B55;
+  max-width: var(--max-width);
 }
 
 .project-container {
@@ -1539,7 +1608,7 @@ Variables
 .footer {
   display: grid;
   place-items: center;
-  background-color: black;
+  background-color: var(--primary-text-color);
   color: white;
   margin: 0 auto;
   z-index: 1;

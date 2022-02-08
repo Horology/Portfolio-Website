@@ -14,26 +14,23 @@ Variables
     --blue-text-background: rgba(104, 82, 231, 0.25);
     --blue-text-background-hover: rgba(82, 11, 139, 0.5);
     /* primary color */
-    --primary-text-color:#122e47;
-    --primary-text-color2:#2d327a;
+    --primary-text-color:#160f29;
+    --primary-text-color2:#246a73;
+    --background-color: #D4F1F4;
+    --background-color2: #e0fcff;
+    --background-color3: #368F8B;
+    /* secondary color */
+    --secondary-color: #DDBEA8;
+    --secondary-color2: #F3DFC1;
+    --secondary-color3: #75E6DA;
     /* span text */
     --span-text: orange ; 
-    /* lighter shades of primary color */
-    --clr-primary-6: hsl(185, 57%, 50%);
-    --clr-primary-7: hsl(184, 65%, 59%);
-    /* darkest grey - used for headings */
-    --clr-grey-1: hsl(209, 61%, 16%);
-    --clr-grey-2: hsl(211, 39%, 23%);
-    --clr-grey-3: hsl(209, 34%, 30%);
-    --clr-grey-4: hsl(209, 28%, 39%);
     /* grey used for paragraphs */
     --clr-grey-5: hsl(210, 22%, 49%);
     /* responsive text colors*/
     --highlighted-text:rgb(153, 197, 22);
     --highlighted-text-hover:rgb(246, 255, 224);
     --highlighted-background: rgba(126, 137, 173, 0.5);
-    // Variables not in use at the moment
-    --clr-green-light: hsl(125, 71%, 66%);
     --clr-black: #222;
     --ff-primary: 'Roboto', sans-serif;
     --ff-secondary: 'Open Sans', sans-serif;

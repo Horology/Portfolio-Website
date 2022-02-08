@@ -78,7 +78,7 @@ div {
             overflow: hidden;
             z-index: 1;
             &:hover {
-                color:var(--blue-text-hover);
+                color:var(--secondary-color);
                 &:before {
                     width: 100%;
             }
@@ -147,7 +147,7 @@ div {
     margin: auto;
     background-color: var( --highlighted-background);
     opacity: .75;
-    color: var(--highlighted-text-hover);
+    color: var(--primary-text-color2);
     border-radius: .5rem;
     padding: 1rem 2rem;
     width: 75%;
@@ -171,8 +171,8 @@ div {
 .introduction {
     padding: 50px;
     text-align: center;
-    background-color: #e0fcff;
-    color: black;
+
+    max-width: var(--max-width);
     h5{
         opacity: .8;
     }
@@ -194,8 +194,8 @@ div {
     justify-content: space-between;
     > p {
         padding: .25rem 1rem;
-        background-color: var(--blue-text-hover);
-        color: grey;
+        background-color: var(--blue-text-background);
+        color: var(--primary-text-color2);
         border-radius: .25rem;
 
     }
@@ -223,9 +223,10 @@ div {
 }
 
 .skills-outer-container {
-    color: 102a42;
+    color: #246A73;
     border-radius: 2rem;
     padding: 2rem;
+    max-width: var(--max-width);
     @media only screen and (max-width: 1200px) {
         overflow: hidden;
         -ms-overflow-style: none; 
@@ -239,8 +240,8 @@ div {
 
 .outer-outer-container {
     position: relative;
-    background-color: #f5f5f5;
-    // #fffaeb; 
+    background-color: var(--background-color);
+
 }
 
 .skills-container {
@@ -314,7 +315,17 @@ div {
     width: 50%;
     height: 50%;
     margin: 0;
-    border-radius: 3REM;
+    border-radius: 3rem;
+    @media screen and (max-width: 600px){
+        padding-right: .25rem; 
+        padding-left: .25rem;
+        h1 {
+            font-size: 200%;
+        }
+        padding-top: 1rem;
+        margin: 0;
+        font-size: 75%;
+    }
     p {
         margin: auto;
         margin-top: 5rem;

@@ -1,7 +1,7 @@
 .footer {
     display: grid; 
     place-items: center; 
-    background-color: black;
+    background-color: var(--primary-text-color);
     color: white; 
     margin: 0 auto;
     z-index: 1;
