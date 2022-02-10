@@ -4,6 +4,7 @@
     padding: 0; 
     margin: 0; 
     box-sizing: border-box; 
+    -webkit-transition: var(--transition);
     transition: var(--transition);
     text-decoration: none;
     user-select: none;
@@ -31,13 +32,13 @@ p {
 }
 
 .title-header-white {
-    color:lightgrey;
+    color:white;
     text-align: center;
     padding: .25rem;
     margin-top: 3rem;
     font-family: serif; 
-    border-top: .5rem solid lightgrey;
-    border-bottom: .5rem solid lightgrey;
+    border-top: .5rem solid white;
+    border-bottom: .5rem solid white;
 }
 
 
@@ -45,6 +46,7 @@ p {
     display: block;
     position: relative;
     margin-top: 3rem;
+    -webkit-transition: width 2s, height 2s, background-color 2s, transform 2s;
     transition: width 2s, height 2s, background-color 2s, transform 2s;
 
     @media screen and (min-width:800px){
@@ -77,6 +79,7 @@ p {
 }
 
 .transition{
+    -webkit-transition: width 2s, height 2s, background-color 1s, transform 1s;
     transition: width 2s, height 2s, background-color 1s, transform 1s;
 }
 

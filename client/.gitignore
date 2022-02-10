@@ -1,3 +1,5 @@
 node_modules
 build
 .env
+/src/pages/sum.js
+/src/pages/sum.test.js

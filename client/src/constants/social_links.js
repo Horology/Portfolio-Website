@@ -29,7 +29,7 @@ const data = [
     id: 3,
     icon: <FaGitSquare className="social-icon"></FaGitSquare>,
     icon2: <FaGithub className="social-icon"></FaGithub>,
-    url: "https://github.com/Horology/Horology.github.io",
+    url: "https://github.com/Horology",
   },
   {
     id: 4,

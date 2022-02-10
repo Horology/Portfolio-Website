@@ -1,9 +1,21 @@
 @import '_variables';
 
 .image-container {
-    height: 20em;
-    background: black;
+    height: 30em;
+    background: rgb(10, 47, 49);
+    z-index: -3;
+    overflow: hidden;
 }
+
+.vid-container {
+    height: 100%;
+    width: 100%;
+}
+#canvas{
+    height: 100%;
+    width: 100%;
+}
+
 
 // running Pikachu
 .scroll-left {
@@ -58,6 +70,7 @@
     text-align: left;
     color: var(--primary-text-color2);
 }
+
 @media (max-width: 500px) {
 div {
     margin-left: 0 !important;     
@@ -69,11 +82,13 @@ div {
     align-items: center;
     .links {
         svg { 
+            --trans: all .3s;
             margin: .5rem;
             width: 2rem;
             height: 100%;
             color: var(--primary-text-color2);
-            transition: all .3s;
+            -webkit-transition: var(--trans);
+            transition: var(--trans);
             position: relative;
             overflow: hidden;
             z-index: 1;
@@ -96,6 +111,7 @@ div {
     font-size: .75rem;
 
     button {
+        --trans: all .35s;
         display: block;
         padding: 1rem;
         margin-right: .25rem;
@@ -106,7 +122,8 @@ div {
         border: 2px solid var(--blue-text-background-hover);
         text-align: center;
         position: relative;
-        transition: all .35s;
+        -webkit-transition: var(--trans);
+        transition: var(--trans) ;
         span{
             position: relative;
             z-index: 2;
@@ -119,7 +136,8 @@ div {
             width: 0;
             height: 100%;
             background: var(--blue-text-background-hover);
-            transition: all .35s;
+            -webkit-transition: var(--trans);
+            transition: var(--trans) ;
         }
         
         &:hover{
@@ -202,12 +220,14 @@ div {
 }
 
 .absolute-image {
+    --trans: width .5s;
     position: absolute;
     width: 20rem;
     height: 20rem;
     top: -200%;
     right: 5%;
-    transition: width .5s;
+    -webkit-transition: var(--trans) ;
+    transition: var(--trans);
     @media screen and (max-width: 1500px){
         width: 0;
     }

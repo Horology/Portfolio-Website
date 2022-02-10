@@ -87,6 +87,7 @@ const Contacts = () => {
                         fullWidth
                         id="firstName"
                         label="First Name"
+                        value = {message['firstName']}
                         autoFocus
                         onChange ={handleMessage}
                       />
@@ -97,6 +98,7 @@ const Contacts = () => {
                         fullWidth
                         id="lastName"
                         label="Last Name"
+                        value = {message['lastName']}
                         name="lastName"
                         autoComplete="family-name"
                         onChange ={handleMessage}
@@ -108,6 +110,7 @@ const Contacts = () => {
                         fullWidth
                         id="email"
                         label="Email Address"
+                        value = {message['email']}
                         name="email"
                         autoComplete="email"
                         onChange ={handleMessage}
@@ -120,6 +123,7 @@ const Contacts = () => {
                           fullWidth 
                           id="outlined-multiline-flexible"
                           label="Multiline"
+                          value = {message['message']}
                           variant="outlined"
                           name = "message"
                           multiline

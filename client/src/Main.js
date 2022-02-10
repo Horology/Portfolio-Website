@@ -62,7 +62,7 @@ const Main = () => {
                     })}
                 </div>
                   <Routes>
-                    <Route path = "/*" element = {<Home isVisible ={isVisible}/>}/> 
+                    <Route path ="/*" element = {<Home isVisible ={isVisible}/>}/> 
                     <Route path = "/contacts" element = {<Contacts/>}/> 
                     <Route path = "/art/" element = {<Art/>}/>
                     <Route path = "/code/" element = {<Code/>}/>

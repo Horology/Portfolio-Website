@@ -9,7 +9,7 @@ const Footer = React.forwardRef(({ref}) => {
                 <div className = 'social-links'> 
                     {socialLinks.map(link => {
                         return(
-                            <a href = {link.url} key = {link.id } className = 'social-link'> 
+                            <a href = {link.url} key = {link.id } className = 'links'> 
                                 {link.icon}
                             </a>
                         )
@@ -18,7 +18,7 @@ const Footer = React.forwardRef(({ref}) => {
                 <div> 
                     © {new Date().getFullYear()},
                     {` `}
-                    React 
+                    Hou Chong Chan  
                 </div>
                 <div className="section"></div>
             </div>

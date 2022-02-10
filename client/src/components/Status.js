@@ -8,8 +8,7 @@ const Status = () => {
     <div className = 'responsive'>
         <img className = 'absolute-image' src = {image} />
         <p  className = 'life-motto' padding = '2rem'> 
-            I am currently a mechanical engineer with software engineering background. 
-            I have the passion to transition into a more software-driven field. 
+            I am a mechanical engineer-turned Web Developer, based in NYC.
             I am currently looking into adding the following to my skill assets.
             <br /> 
             <br /> 

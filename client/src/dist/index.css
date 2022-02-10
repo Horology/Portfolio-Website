@@ -71,13 +71,13 @@ p {
 }
 
 .title-header-white {
-  color: lightgrey;
+  color: white;
   text-align: center;
   padding: .25rem;
   margin-top: 3rem;
   font-family: serif;
-  border-top: .5rem solid lightgrey;
-  border-bottom: .5rem solid lightgrey;
+  border-top: .5rem solid white;
+  border-bottom: .5rem solid white;
 }
 
 .responsive {
@@ -251,6 +251,7 @@ template {
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  color: white;
 }
 
 a:active,
@@ -904,8 +905,20 @@ Variables
 }
 
 .image-container {
-  height: 20em;
-  background: black;
+  height: 30em;
+  background: #0a2f31;
+  z-index: -3;
+  overflow: hidden;
+}
+
+.vid-container {
+  height: 100%;
+  width: 100%;
+}
+
+#canvas {
+  height: 100%;
+  width: 100%;
 }
 
 .scroll-left {
@@ -973,11 +986,12 @@ Variables
 }
 
 .social-links .links svg {
+  --trans: all .3s;
   margin: .5rem;
   width: 2rem;
   height: 100%;
   color: var(--primary-text-color2);
-  transition: all .3s;
+  transition: var(--trans);
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -1000,6 +1014,7 @@ Variables
 }
 
 .red-btn-container button {
+  --trans: all .35s;
   display: block;
   padding: 1rem;
   margin-right: .25rem;
@@ -1010,7 +1025,7 @@ Variables
   border: 2px solid var(--blue-text-background-hover);
   text-align: center;
   position: relative;
-  transition: all .35s;
+  transition: var(--trans);
 }
 
 .red-btn-container button span {
@@ -1026,7 +1041,7 @@ Variables
   width: 0;
   height: 100%;
   background: var(--blue-text-background-hover);
-  transition: all .35s;
+  transition: var(--trans);
 }
 
 .red-btn-container button:hover {
@@ -1109,12 +1124,13 @@ Variables
 }
 
 .absolute-image {
+  --trans: width .5s;
   position: absolute;
   width: 20rem;
   height: 20rem;
   top: -200%;
   right: 5%;
-  transition: width .5s;
+  transition: var(--trans);
 }
 
 @media screen and (max-width: 1500px) {
@@ -1561,7 +1577,6 @@ Variables
 .project-container {
   display: flex;
   padding: 2rem;
-  height: 900px;
   justify-content: space-between;
   align-items: center;
 }
@@ -1697,7 +1712,7 @@ Variables
   align-items: center;
   z-index: 5;
   background: #1a1436;
-  border-bottom: .5 solid white;
+  border-bottom: 0.5 solid white;
 }
 
 @media screen and (min-width: 960px) {
@@ -1706,13 +1721,20 @@ Variables
   }
 }
 
+.profile-pic {
+  max-width: 30%;
+  height: auto;
+  border: solid 2px var(--highlighted-text);
+  border-radius: 1rem;
+}
+
 .navbar-button {
   display: block;
   margin: 0 1rem;
   padding: 1rem;
   text-align: center;
   justify-content: center;
-  transition: width 2s, height 2s, background-color 1s, transform 1s, border .25s;
+  transition: width 2s, height 2s, background-color 1s, transform 1s, border 0.25s;
   color: #716b9c;
 }
 
@@ -1767,7 +1789,7 @@ Variables
 
 @keyframes fade-in {
   from {
-    opacity: .5;
+    opacity: 0.5;
     transform: translateY(-5px);
   }
   to {
@@ -1801,7 +1823,7 @@ Variables
 .subbar-links-active {
   display: flex;
   justify-content: space-between;
-  padding: .5rem .5rem;
+  padding: 0.5rem 0.5rem;
   padding-top: 3rem;
   background: transparent;
   position: fixed;
@@ -1809,17 +1831,17 @@ Variables
 }
 
 .subbar-links-active .sublinks {
-  padding: .5rem .5rem;
+  padding: 0.5rem 0.5rem;
   margin: 0rem 1rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   color: grey;
 }
 
 .subbar-links-active .sublinks-active {
-  padding: .5rem .5rem;
+  padding: 0.5rem 0.5rem;
   color: white;
   background-color: rgba(104, 82, 231, 0.5);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 .hide {

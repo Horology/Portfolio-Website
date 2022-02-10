@@ -19,7 +19,7 @@ const Code = () => {
         <br></br>
         <div className = 'project-container'> 
             <Grid container spacing = {6} columns={{ xs: 12, sm: 3 }}>
-                <Grid item xs={12} sm={12} md={4} lg={4} xl={4} >
+                <Grid item xs={12} sm={6} md={4} lg={4} xl={3} >
                     <GalleryCard 
                     title = {'Weather App'}
                     image = {photoWeather}
@@ -27,7 +27,7 @@ const Code = () => {
                     description = "Experimented with Unsplash and weather API. Used Typescript to develop the application. Although it is cumbersome, it did limit the amount of rendering errors that I would\'ve gotten.Use Tailwind to quickly format the application layout."
                     link = 'https://hou-demo-weather.netlify.app/'/>
                 </Grid>
-                <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
+                <Grid item xs={12} sm={6} md={4} lg={4} xl={3}>
                     <GalleryCard 
                     title = {'Movie Tracker'}
                     image = {photoMovie}
@@ -35,7 +35,7 @@ const Code = () => {
                     description = "Ever want to track the movie that you\'ve watched and want to watch? This app provides real-time search results of movies. Used a combination of Tailwind and regular CSS for styling"
                     link = 'https://hou-movie-tracker.netlify.app/'/>
                 </Grid>
-                <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
+                <Grid item xs={12} sm={6} md={4} lg={4} xl={3}>
                     <GalleryCard 
                     title = {'To-Do List'}
                     image = {photoTodo}
@@ -43,7 +43,7 @@ const Code = () => {
                     description = 'Personally keeps track of my personal tasks. Uses local storage and contextAPI to store data. Experimented with styled components in React'
                     link = 'https://hou-todo-list.netlify.app/'/>
                 </Grid>
-                <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
+                <Grid item xs={12} sm={6} md={4} lg={4} xl={3}>
                     <GalleryCard 
                     title = {'Online Shopping'}
                     image = {photoCommerce}
@@ -51,7 +51,7 @@ const Code = () => {
                     description = 'Created a template online shopping platform that has features like product filtering, useReducer, useAuth0, and Stripe.io.'
                     link = 'https://hou-commerce-platform.netlify.app'/>
                 </Grid>
-                <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
+                <Grid item xs={12} sm={6} md={4} lg={4} xl={3}>
                     <GalleryCard 
                     title = {'Web Portfolio'}
                     image = {photoPort}
@@ -59,7 +59,7 @@ const Code = () => {
                     description = 'Enjoyed building this responsive web portfolio using React and MUI. Send submitted messages are stored in MongoDB. Looking forward to improve it down the line!'
                     link = '/'/>
                 </Grid>
-                <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
+                <Grid item xs={12} sm={6} md={4} lg={4} xl={3}>
                     <GalleryCard 
                     title = {'Employee Management Database'}
                     image = {photoEmp}
