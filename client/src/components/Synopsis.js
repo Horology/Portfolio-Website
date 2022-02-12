@@ -19,7 +19,8 @@ const Synopsis = () => {
 
   return <div className = 'staircase'>
       <div><h3>Hello, I am a</h3></div>
-      <div><h1 className = 'span-text'>Mechanical Engineer-turned Software Developer </h1></div>
+      <div><h1 className = 'span-text'>Mechanical Engineer-turned </h1></div>
+      <div><h1 className = 'span-text'> Software Developer </h1></div>
       <div><h3> Using automation expertise from robotics </h3></div>
       <div><h3> To pave way into software development</h3></div>
   </div>;

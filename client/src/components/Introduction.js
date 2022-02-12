@@ -21,6 +21,7 @@ const Introduction = () => {
                 )
             })}
         </div>
+        <Status /> 
         
         <div className = 'context'>
             <p>Here, you can find the
@@ -38,7 +39,6 @@ const Introduction = () => {
             </Link>  
             in my free time</p>
         </div>
-        <Status /> 
         
   </div>;
 };

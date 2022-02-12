@@ -1,12 +1,10 @@
 import React, { useRef, useEffect, useState } from 'react';
 import {HashRouter, Routes ,Route, Link } from 'react-router-dom';
 import { AppBar} from '@material-ui/core';
-import About from './pages/About.js';
 import Contacts from './pages/Contacts.js';
 import Home from './pages/Home.js';
 import Art from './pages/Art.js';
 import Code from './pages/Code.js';
-import Projects from './pages/Projects.js';
 import Navbar from './components/Navbar.js';
 import Footer from './components/Footer.js';
 import { useSelector} from 'react-redux';
