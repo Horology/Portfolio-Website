@@ -11,7 +11,7 @@
   text-decoration: none;
   user-select: none;
   -webkit-user-select: text;
-  -webkit-user-select: all;
+  -ms-user-select: text;
 }
 
 body {
