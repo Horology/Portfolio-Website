@@ -1,125 +1,123 @@
-@import '_variables';
+@import "_variables";
 
-*, ::after, ::before {
-    padding: 0; 
-    margin: 0; 
-    box-sizing: border-box; 
-    -webkit-transition: var(--transition);
-    transition: var(--transition);
-    text-decoration: none;
-    user-select: none;
-
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: text;
+  -webkit-user-select: all;
 }
 
-body { 
-    overflow: hidden;
+body {
+  overflow: hidden;
 }
 
 p {
-    color: #617d98;
-    margin: 0; 
+  color: #617d98;
+  margin: 0;
 }
 
-
 .title-header {
-    color: var(--primary-text-color);
-    text-align: center;
-    padding: .25rem;
-    margin-top: 3rem;
-    font-family: serif; 
-    border-top: .5rem solid var(--primary-text-color);
-    border-bottom: .5rem solid var(--primary-text-color);
+  color: var(--primary-text-color);
+  text-align: center;
+  padding: 0.25rem;
+  margin-top: 3rem;
+  font-family: serif;
+  border-top: 0.5rem solid var(--primary-text-color);
+  border-bottom: 0.5rem solid var(--primary-text-color);
 }
 
 .title-header-white {
-    color:white;
-    text-align: center;
-    padding: .25rem;
-    margin-top: 3rem;
-    font-family: serif; 
-    border-top: .5rem solid white;
-    border-bottom: .5rem solid white;
+  color: white;
+  text-align: center;
+  padding: 0.25rem;
+  margin-top: 3rem;
+  font-family: serif;
+  border-top: 0.5rem solid white;
+  border-bottom: 0.5rem solid white;
 }
 
+.responsive {
+  display: block;
+  position: relative;
+  margin-top: 3rem;
+  -webkit-transition: width 2s, height 2s, background-color 2s, transform 2s;
+  transition: width 2s, height 2s, background-color 2s, transform 2s;
 
-.responsive{
-    display: block;
-    position: relative;
-    margin-top: 3rem;
-    -webkit-transition: width 2s, height 2s, background-color 2s, transform 2s;
-    transition: width 2s, height 2s, background-color 2s, transform 2s;
-
-    @media screen and (min-width:800px){
-        display: flex;
-    }
+  @media screen and (min-width: 800px) {
+    display: flex;
+  }
 }
 
-.half{
-    text-align:center;
+.half {
+  text-align: center;
 
-    @media screen and (min-width:800px){
-        text-align: left;
-        padding-left: 4rem;
-        width: 50%;
-    }
+  @media screen and (min-width: 800px) {
+    text-align: left;
+    padding-left: 4rem;
+    width: 50%;
+  }
 }
-
 
 .span-text {
-    color: var(--highlighted-text);
-    display: inline-block;
-    padding: .25rem .5rem;
-    margin-bottom: 2rem;
+  color: var(--highlighted-text);
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 2rem;
 
-    &:hover {
-        background-color:var(--highlighted-background);
-        color:var(--highlighted-text-hover);
-        border-radius: .5rem;
-    }
+  &:hover {
+    background-color: var(--highlighted-background);
+    color: var(--highlighted-text-hover);
+    border-radius: 0.5rem;
+  }
 }
 
-.transition{
-    -webkit-transition: width 2s, height 2s, background-color 1s, transform 1s;
-    transition: width 2s, height 2s, background-color 1s, transform 1s;
+.transition {
+  -webkit-transition: width 2s, height 2s, background-color 1s, transform 1s;
+  transition: width 2s, height 2s, background-color 1s, transform 1s;
 }
 
 button {
-    padding: 0;
-    border: none;
-    background: none;
-    cursor: pointer;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
-// Styling for custom button 
-.custom-btn { 
-    background-color:var(--blue-text-background);
-    color:var(--blue-text);
-    border-radius: .5rem;
-    padding: .25rem 1.25rem;
-    &:hover{
-        background-color:var(--blue-text-background-hover);
-        color:var(--blue-text-hover);
-
-    }
-    &:active{
-        background-color:var(--blue-text-background);
-        color:var(--blue-text);
-        opacity: .5;
-    }
+// Styling for custom button
+.custom-btn {
+  background-color: var(--blue-text-background);
+  color: var(--blue-text);
+  border-radius: 0.5rem;
+  padding: 0.25rem 1.25rem;
+  &:hover {
+    background-color: var(--blue-text-background-hover);
+    color: var(--blue-text-hover);
+  }
+  &:active {
+    background-color: var(--blue-text-background);
+    color: var(--blue-text);
+    opacity: 0.5;
+  }
 }
 
 .bigger-space {
-    margin: 0 1.25rem;
+  margin: 0 1.25rem;
 }
 
 .justify .left {
-    display: flex;
-    justify-content:left;
-    p{
-        justify-content:left;  
-    }
+  display: flex;
+  justify-content: left;
+  p {
+    justify-content: left;
+  }
 }
 .contact-margin {
-    padding: 10rem 0; 
-
+  padding: 10rem 0;
 }

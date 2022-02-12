@@ -47,14 +47,10 @@ const Contacts = () => {
     e.preventDefault();
     if( !message['firstName']||!message['lastName']||!message['email']|| !message['message']){
       setHelperMessage('One of the required inputs are not filled')
-      console.log(message)
-      setTimeout(() => {setHelperMessage('')}, 3000);
-      return
+      // setTimeout(() => {setHelperMessage('')}, 3000);
     }
     createPost(message);
     setMessage(initialForm);
-    console.log(message);
-
   }
 
   useEffect(() => {
@@ -63,21 +59,26 @@ const Contacts = () => {
 
   const handleDisable = () => {
     if(!message['firstName']||!message['lastName']||!message['email']|| !message['message']){
-      
+  
       setDisableButton(1)
-      return
+    }else{
+      setDisableButton(0)
     }
-    setDisableButton(0)
     return 
   }  
 
 
     return(
+      // <>
+      //   <form action = '/signup' method = 'post'>
+
+      //   </form>
+      // </>
       <ThemeProvider theme = {theme}>
-              <div className = ' contact margin' style={{ background: 'skyblue', paddingTop:'5rem'}}>
+            <div className = ' contact margin' style={{ background: 'skyblue', paddingTop:'5rem'}}>
               <Container>
                 <h1 className = 'title-header-white' >Contact Form </h1>
-                <Box component="form" noValidate sx={{ mt: 3 }} style = {{marginTop: '4rem'}}>
+                <Box component="form" sx={{ mt: 3 }} style = {{marginTop: '4rem'}}>
                   <Grid container spacing={7} >
                     <Grid item xs={12} sm={6} >
                       <TextField style={{color: 'white'}}
@@ -117,35 +118,31 @@ const Contacts = () => {
                       />
                     </Grid>
                   </Grid>
-                  <Box sx={{ m: 5 }}></Box>
-                  <Grid container >
-                      <TextField                   
-                          fullWidth 
-                          id="outlined-multiline-flexible"
-                          label="Multiline"
-                          value = {message['message']}
-                          variant="outlined"
-                          name = "message"
-                          multiline
-                          rows={16}
-                          style={{Align:'right'}}
-                          helperText="Please enter your message here"  
-                          onChange ={handleMessage}          
-                      />
-                  </Grid>
-
-                  <Grid container justifyContent="center" >
-                      <Button
-                      type="submit"
-                      style={{maxWidth: '120rem', float: 'right'}}
-                      variant="contained"
-                      sx={{ mt: 3, mb: 2 }}
-                      onClick = {handleSubmit}
-                      disabled = {disableButton}
-                      >
-                      Sent Message
-                      </Button>
-                  </Grid>
+                  <br/>
+                  <TextField      
+                      required              
+                      fullWidth 
+                      id="outlined-multiline-flexible"
+                      label="Multiline"
+                      value = {message['message']}
+                      variant="outlined"
+                      name = "message"
+                      multiline
+                      rows={16}
+                      style={{Align:'right'}}
+                      helperText="Please enter your message here"  
+                      onChange ={handleMessage}          
+                  />
+                  <Button
+                  type="submit"
+                  style={{maxWidth: '120rem', float: 'right'}}
+                  variant="contained"
+                  sx={{ mt: 3, mb: 2 }}
+                  onClick = {handleSubmit}
+                  disabled = {disableButton}
+                  >
+                  Sent Message
+                  </Button>
                 </Box>
               </Container>
             </div>  
