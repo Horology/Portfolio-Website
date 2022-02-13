@@ -27,16 +27,29 @@ const BottomWave = () => {
   )
 }
 
+
 const Arrow = () => {
   return (
     <section className='wave-container'>
-        <div class="arrow">
+        <div class="arrow1">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
               <path d="M649.97 0L550.03 0 599.91 54.12 649.97 0z" class="shape-fill"></path>
+          </svg>
+      </div>
+    </section>
+  )
+}
+
+const Slope = () => {
+  return (
+    <section className='wave-container'>
+        <div class="slope">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
           </svg>
         </div>
     </section>
   )
 }
 
-export {TopWave , BottomWave, Arrow}
+export {TopWave , BottomWave, Arrow, Slope}

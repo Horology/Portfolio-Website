@@ -5,6 +5,7 @@ import Synopsis from './Synopsis';
 import Status from './Status';
 import socialLinks from '../constants/social_links';
 
+
 const Introduction = () => {
   return <div className = 'introduction'>
         <h1 className = 'title-header' >Welcome!</h1>

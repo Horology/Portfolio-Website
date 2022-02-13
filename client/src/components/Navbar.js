@@ -53,7 +53,8 @@ const Navbar = () => {
                 </Box>
                 <Box sx={{ display: { xs: "flex", md: "none" } }}>
                     <button  className = 'transition' onClick = {() =>{dispatch(toggleMenu()); setShow(!show)}}>
-                        {show?<FaCaretUp className = 'transition'/>:<FaCaretDown className = 'transition'/>}
+                        {show?<FaCaretUp className = 'transition' color = 'white' size = {30}/>
+                        :<FaCaretDown className = 'transition' color = 'white' size = {30}/>}
                     </button>
                     
                 </Box>   

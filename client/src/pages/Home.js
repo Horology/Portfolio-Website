@@ -8,7 +8,7 @@ import android from "../img/link.gif";
 import Projects from "../pages/Projects"
 import ScrollingBar from '../components/ScrollingBar';
 import {TopWave, BottomWave, Arrow} from '../components/Transition';
-
+import {Slope} from '../components/Transition';
 
 const Home = ({isVisible}) => {
 
@@ -18,6 +18,7 @@ const Home = ({isVisible}) => {
         <>
             <ImageOverlay/>
             <div align = 'center'> 
+                {/* <Slope /> */}
                 <Introduction />
                 <TopWave />
                 <About /> 

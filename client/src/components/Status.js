@@ -35,7 +35,6 @@ const Status = () => {
                     <p> {para.description}</p>
                     <img className = 'wave1' src = {wave} />
                     <img className = 'wave2' src = {wave} />
-                    <img className = 'wave3' src = {wave} />
                 </div>
             )   
         })}

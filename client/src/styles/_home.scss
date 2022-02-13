@@ -164,7 +164,7 @@
 @mixin wave-hov {
   position: absolute;
   width: 300%;
-  animation: move_wave 2s linear infinite;
+  animation: move_wave 3s linear infinite;
 }
 .life-motto {
   position: relative;
@@ -189,15 +189,12 @@
   .wave2 {
     @include wave-pos;
     transform: Scale(-X);
-    opacity: 0.5;
-  }
-  .wave3 {
-    @include wave-pos;
-    opacity: 0.75;
-    transform: translateX(100%);
+    opacity: 0.8;
   }
   &:hover {
-    width: 101%;
+    transition: var(--transition);
+    transform: scale(1.05);
+    width: 80%;
     .wave1 {
       @include wave-hov;
     }
@@ -205,10 +202,7 @@
       @include wave-hov;
       animation-direction: reverse;
     }
-    .wave3 {
-      @include wave-hov;
-      animation-direction: reverse;
-    }
+
     h2 {
       font-size: 1.5rem;
     }
@@ -220,18 +214,19 @@
 
 @keyframes move_wave {
   0% {
-    transform: translateX(15%);
+    transform: translateX(15%) translateY(50%);
   }
   50% {
-    transform: translateX(0%);
+    transform: translateX(0%) translateY(0%);
   }
   100% {
-    transform: translateX(-30%);
+    transform: translateX(-30%) translateY(50%);
   }
 }
 
 .introduction {
   padding: 50px;
+  position: relative;
   background-color: var(--background-color);
   max-width: var(--max-width);
   h5 {

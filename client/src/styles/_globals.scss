@@ -6,8 +6,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
   text-decoration: none;
   user-select: none;
   -webkit-user-select: text;
@@ -29,7 +27,7 @@ p {
   padding: 0.25rem;
   margin-top: 3rem;
   font-family: serif;
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 .title-header-white {
@@ -38,7 +36,7 @@ p {
   padding: 0.25rem;
   margin-top: 3rem;
   font-family: serif;
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 .responsive {
@@ -88,8 +86,8 @@ button {
 .custom-btn {
   background-color: var(--blue-text-background);
   color: var(--blue-text);
-  border-radius: 0.5rem;
-  padding: 0.25rem 1.25rem;
+  border-radius: 50%;
+  padding: 0.25rem;
   &:hover {
     background-color: var(--blue-text-background-hover);
     color: var(--blue-text-hover);

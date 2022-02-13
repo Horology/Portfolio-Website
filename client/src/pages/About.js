@@ -23,7 +23,7 @@ const About = () => {
                 )}
                 </p>
                 <a href ='https://github.com/Horology'>
-                    <CustomButton text = 'Click Here to Learn More'/>
+                    <CustomButton text = 'Git' />
                 </a>
             </div>
         </div>

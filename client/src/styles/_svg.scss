@@ -43,7 +43,7 @@
   fill: #d4f1f4;
 }
 
-.arrow {
+.arrow1 {
   position: absolute;
   top: 0;
   left: 0;
@@ -52,13 +52,34 @@
   line-height: 0;
 }
 
-.arrow svg {
+.arrow1 svg {
   position: relative;
   display: block;
   width: calc(162% + 1.3px);
-  height: 191px;
+  height: 150px;
 }
 
-.arrow .shape-fill {
+.arrow1 .shape-fill {
   fill: #d4f1f4;
+}
+
+.slope {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.slope svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 271px;
+  transform: rotateY(180deg);
+}
+
+.slope .shape-fill {
+  fill: #ffffff;
 }

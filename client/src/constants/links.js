@@ -32,6 +32,10 @@ const data = [
         art:<FaPaintBrush size={30}/>,
         code:<FaCode size={30}/>,
       },
+      projectType:{
+        art: 'Art',
+        code:'Code'
+      },
     },
 ];
   
