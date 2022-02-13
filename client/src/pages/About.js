@@ -8,7 +8,7 @@ const About = () => {
     return(
         <div className = "about-background">
             <div id = "about" className = "about-container">
-                <h1 className = 'title-header' >About</h1>
+                <h1 className = 'title-header-white' >About</h1>
                 {aboutme_descriptions.map((data)=>{
                     return(
                         <AboutMeButton text = {data.description}/>

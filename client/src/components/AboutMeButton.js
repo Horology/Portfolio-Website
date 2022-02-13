@@ -19,7 +19,7 @@ const AboutMeButton = ({text}) => {
         <button onMouseEnter = {handleEnter} 
         onMouseLeave = {handleLeave}
         className = 'red-btn'><span>{firstchar}</span></button> 
-        {show && <span>{ remain}</span>}
+        {show && <span>{remain}</span>}
     </div>;
 };
 

@@ -148,7 +148,7 @@
   > span {
     align-self: end;
     margin-left: 0.25rem;
-    color: var(--blue-text-background-hover);
+    color: var(--background-color2);
   }
   @media screen and (min-width: 768px) {
     font-size: 1rem;
@@ -232,7 +232,7 @@
 
 .introduction {
   padding: 50px;
-
+  background-color: var(--background-color);
   max-width: var(--max-width);
   h5 {
     opacity: 0.8;

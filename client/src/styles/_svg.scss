@@ -1,0 +1,64 @@
+.wave-container {
+  position: relative;
+}
+.wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave svg {
+  position: relative;
+  display: block;
+  width: calc(154% + 1.3px);
+  height: 118px;
+  transform: rotateY(180deg);
+}
+
+.wave .shape-fill {
+  fill: #d4f1f4;
+}
+
+.wave2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.wave2 svg {
+  position: relative;
+  display: block;
+  width: calc(104% + 1.3px);
+  height: 67px;
+}
+
+.wave2 .shape-fill {
+  fill: #d4f1f4;
+}
+
+.arrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.arrow svg {
+  position: relative;
+  display: block;
+  width: calc(162% + 1.3px);
+  height: 191px;
+}
+
+.arrow .shape-fill {
+  fill: #d4f1f4;
+}

@@ -29,18 +29,16 @@ p {
   padding: 0.25rem;
   margin-top: 3rem;
   font-family: serif;
-  border-top: 0.5rem solid var(--primary-text-color);
-  border-bottom: 0.5rem solid var(--primary-text-color);
+  font-size: 5rem;
 }
 
 .title-header-white {
-  color: white;
+  color: var(--background-color2);
   text-align: center;
   padding: 0.25rem;
   margin-top: 3rem;
   font-family: serif;
-  border-top: 0.5rem solid white;
-  border-bottom: 0.5rem solid white;
+  font-size: 5rem;
 }
 
 .responsive {

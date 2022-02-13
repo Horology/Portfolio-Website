@@ -70,18 +70,16 @@ p {
   padding: 0.25rem;
   margin-top: 3rem;
   font-family: serif;
-  border-top: 0.5rem solid var(--primary-text-color);
-  border-bottom: 0.5rem solid var(--primary-text-color);
+  font-size: 5rem;
 }
 
 .title-header-white {
-  color: white;
+  color: var(--background-color2);
   text-align: center;
   padding: 0.25rem;
   margin-top: 3rem;
   font-family: serif;
-  border-top: 0.5rem solid white;
-  border-bottom: 0.5rem solid white;
+  font-size: 5rem;
 }
 
 .responsive {
@@ -1054,7 +1052,7 @@ Variables
 .red-btn-container > span {
   align-self: end;
   margin-left: 0.25rem;
-  color: var(--blue-text-background-hover);
+  color: var(--background-color2);
 }
 
 @media screen and (min-width: 768px) {
@@ -1157,6 +1155,7 @@ Variables
 
 .introduction {
   padding: 50px;
+  background-color: var(--background-color);
   max-width: var(--max-width);
 }
 
@@ -1351,7 +1350,7 @@ Variables
 }
 
 .about-background {
-  background-color: var(--background-color2);
+  background-color: var(--highlighted-background);
 }
 
 .about-container {
@@ -1398,7 +1397,7 @@ Variables
 
 @media screen and (max-width: 800px) {
   .box-hobbies {
-    font-size: .75rem;
+    font-size: 0.75rem;
   }
 }
 
@@ -1427,7 +1426,7 @@ Variables
 
 @media screen and (max-width: 800px) {
   .box-programming {
-    font-size: .75rem;
+    font-size: 0.75rem;
   }
 }
 
@@ -1435,7 +1434,7 @@ Variables
   --timeline-length: 15rem;
   --timeline-diff: 3rem;
   --timeline-width: calc(var(--timeline-length) - var(--timeline-diff));
-  --timeline-color:var(--secondary-color);
+  --timeline-color: var(--secondary-color2);
   margin-top: 10rem;
 }
 
@@ -1445,7 +1444,7 @@ Variables
   height: var(--timeline-width);
   border-width: 0;
   border-style: dashed;
-  border-left-width: .5rem;
+  border-left-width: 0.5rem;
   border-color: var(--timeline-color);
 }
 
@@ -1455,7 +1454,7 @@ Variables
   background-position: left bottom;
   position: relative;
   padding: 1rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   display: block;
   position: relative;
   padding: 0 0;
@@ -1473,7 +1472,7 @@ Variables
 @media screen and (max-width: 600px) {
   .timeline .first .relative {
     width: 65%;
-    font-size: .75rem;
+    font-size: 0.75rem;
   }
 }
 
@@ -1486,7 +1485,7 @@ Variables
 
 .timeline .first .relative:hover {
   width: 125%;
-  padding: 1rem .25rem;
+  padding: 1rem 0.25rem;
   font-size: 1.25rem;
   transform: translateX(-10%);
   background-color: var(--blue-text-background-hover);
@@ -1511,8 +1510,8 @@ Variables
   width: var(--timeline-length);
   border-width: 0;
   border-style: dashed;
-  border-top-width: .5rem;
-  border-right-width: .5rem;
+  border-top-width: 0.5rem;
+  border-right-width: 0.5rem;
   border-color: var(--timeline-color);
 }
 
@@ -1522,7 +1521,7 @@ Variables
   background-position: left bottom;
   position: relative;
   padding: 1rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   display: block;
   top: 1rem;
   right: 65%;
@@ -1538,7 +1537,7 @@ Variables
 @media screen and (max-width: 600px) {
   .timeline .second .relative {
     width: 65%;
-    font-size: .75rem;
+    font-size: 0.75rem;
   }
 }
 
@@ -1551,7 +1550,7 @@ Variables
 
 .timeline .second .relative:hover {
   width: 125%;
-  padding: 1rem .25rem;
+  padding: 1rem 0.25rem;
   font-size: 1.25rem;
   transform: translateX(-10%);
   background-color: var(--blue-text-background-hover);
@@ -1579,8 +1578,8 @@ Variables
   width: var(--timeline-length);
   border-width: 0;
   border-style: dashed;
-  border-top-width: .5rem;
-  border-left-width: .5rem;
+  border-top-width: 0.5rem;
+  border-left-width: 0.5rem;
   border-color: var(--timeline-color);
 }
 
@@ -1590,7 +1589,7 @@ Variables
   background-position: left bottom;
   position: relative;
   padding: 1rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   display: block;
   top: 1rem;
   left: 65%;
@@ -1606,7 +1605,7 @@ Variables
 @media screen and (max-width: 600px) {
   .timeline .third .relative {
     width: 65%;
-    font-size: .75rem;
+    font-size: 0.75rem;
   }
 }
 
@@ -1619,7 +1618,7 @@ Variables
 
 .timeline .third .relative:hover {
   width: 125%;
-  padding: 1rem .25rem;
+  padding: 1rem 0.25rem;
   font-size: 1.25rem;
   transform: translateX(-10%);
   background-color: var(--blue-text-background-hover);
@@ -1924,5 +1923,71 @@ Variables
   opacity: 0;
   height: 0;
   overflow: hidden;
+}
+
+.wave-container {
+  position: relative;
+}
+
+.wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave svg {
+  position: relative;
+  display: block;
+  width: calc(154% + 1.3px);
+  height: 118px;
+  transform: rotateY(180deg);
+}
+
+.wave .shape-fill {
+  fill: #d4f1f4;
+}
+
+.wave2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.wave2 svg {
+  position: relative;
+  display: block;
+  width: calc(104% + 1.3px);
+  height: 67px;
+}
+
+.wave2 .shape-fill {
+  fill: #d4f1f4;
+}
+
+.arrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.arrow svg {
+  position: relative;
+  display: block;
+  width: calc(162% + 1.3px);
+  height: 191px;
+}
+
+.arrow .shape-fill {
+  fill: #d4f1f4;
 }
 /*# sourceMappingURL=index.css.map */
