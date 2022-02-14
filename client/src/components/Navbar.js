@@ -39,13 +39,13 @@ const Navbar = () => {
                     <h1 className = 'title' > Hou </h1>
                 </Box>
                 <Box sx={{ display: { xs: "none", md: "flex"} }}>
-                    <button  onClick = {handleClick} button><Link className = 'navbar-button' to = '/#' >{pageLinks[0].icon}</Link> </button>
-                    <HashLink className = 'navbar-button' to = "/#about"> {pageLinks[1].icon} </HashLink>
-                    <Link className = 'navbar-button ' to = '/contacts' >{pageLinks[2].icon} </Link>
+                    <button  onClick = {handleClick} button><Link className = 'navbar-button' to = '/#' >{pageLinks[0].text}</Link> </button>
+                    <HashLink className = 'navbar-button' to = "/#about"> {pageLinks[1].text} </HashLink>
+                    <Link className = 'navbar-button ' to = '/contacts' >{pageLinks[2].text} </Link>
                     {pageLinks.slice(3).map((link) => {
                         return (
                                 <button className = 'navbar-transition' onClick = {()=>setShowSub(!showSub)} >
-                                    {!showSub?<FaCaretUp size ={45}/> :link.icon}
+                                    {link.text}
                                     {!showSub ?<Submenu value = {showSub, setShowSub}/>:null}
                                 </button>
                         )
