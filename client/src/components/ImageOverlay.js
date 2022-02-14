@@ -4,50 +4,76 @@ const ImageOverlay = props => {
   
   const canvasRef = useRef(null)
   
-  const draw = (ctx, frameCount, i) => {
-    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height)
-    ctx.lineWidth = 5;
-    ctx.lineCap = "round";
-    ctx.strokeStyle = "rgba(255, 255, 255, 0.5)";
-    ctx.beginPath()
-    ctx.moveTo(120 + i, 120 + i);
-    ctx.lineTo((frameCount)+130, (frameCount)+130);
+
+  const update = (ctx, object) => {
+    // Draw Canvas Space
+    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+    // ctx.fillStyle = 'red';
+    // ctx.fillRect( 0 , 0 , ctx.canvas.width, ctx.canvas.height);
+    // Draw Triangle
+    ctx.strokeStyle = 'white';
+    ctx.lineWidth = 3; 
+    ctx.beginPath();
+    ctx.moveTo(
+      object.x + object.r * Math.cos(object.a), 
+      object.y - object.r * Math.sin(object.a), 
+    )
+    ctx.lineTo(
+      object.x - object.r * (Math.cos(object.a) + Math.sin(object.a)), 
+      object.y + object.r * (Math.sin(object.a) - Math.cos(object.a)), 
+    )
+    ctx.lineTo(
+      object.x - object.r * (Math.cos(object.a) - Math.sin(object.a)), 
+      object.y + object.r * (Math.sin(object.a) + Math.cos(object.a)), 
+    )
     ctx.closePath();
+    ctx.strokeRect(object.x + object.r + 10, 
+      object.y, 
+      object.r, object.r)
+    ctx.strokeRect(object.x - 2* object.r - 10, 
+      object.y, 
+      object.r, object.r)
     ctx.stroke();
+
   }
 
   
-  // useEffect(() => {
+  useEffect(() => {
     
-  //   const canvas = canvasRef.current
-  //   const context = canvas.getContext('2d')
-  //   let frameCount = 0
-  //   let animationFrameId
+    const canvas = canvasRef.current
+    const context = canvas.getContext('2d')
+    const SHIPSIZE = 80
+    let animationFrameId
     
-  //   //Our draw came here
-  //   const render = () => {
-  //     frameCount++
-  //     for (let i = 0; i < 30; i++){
-  //       draw(context, frameCount, i)
-  //     }
-  //       animationFrameId = window.requestAnimationFrame(render)
-      
-  //     if( frameCount == 30){
-  //       frameCount = 0
-  //     }
-  //   }
-  //   render()
+    let triangle = {
+      x: context.canvas.width/2,
+      y: context.canvas.height/2,
+      r: SHIPSIZE/2,
+      a: 90 / 180 * Math.PI  //convert to radians 
+    }
     
-  //   return () => {
-  //     window.cancelAnimationFrame(animationFrameId)
-  //   }
-  // }, [draw])
+    // function render() {
+    //   // let time = new Date().getTime();
+    //   for (let i = 0; i < 30; i++){
+    //     update(context, triangle)
+    //   }
+    //   // animationFrameId = window.requestAnimationFrame(render)
+    // }
+    // let clear = setInterval(render, 1000/30 )
+    // render()
+    update(context, triangle)
+    
+    return () => {
+      window.cancelAnimationFrame(animationFrameId)
+      // clearInterval(clear)
+    }
+  }, [])
   
   return <div className = 'image-container'>
-    {/* <canvas id = 'canvas' width="1000px" height="500px" ref={canvasRef} {...props}/> */}
-    {/* <video controls autoplay muted loop >
+    <canvas id = 'canvas' width="1000px" height="500px" ref={canvasRef} {...props}/> 
+      <video controls autoplay muted loop >
       <source className = 'vid-container' src="/videos/arrowup2.mp4" type="video/mp4" />
-    </video> */}
+    </video>
   </div>
 }
 
