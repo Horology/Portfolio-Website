@@ -5,7 +5,7 @@ import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 import postsReducer from './reducers/posts';
 import './dist/index.css';
-import {HashRouter, Routes ,Route, Link } from 'react-router-dom';
+import {HashRouter} from 'react-router-dom';
 const store = createStore(postsReducer);
 ReactDOM.render(
     <Provider store = {store}>

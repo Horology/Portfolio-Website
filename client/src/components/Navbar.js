@@ -13,7 +13,7 @@ import Submenu from './submenu.js';
 const Navbar = () => {
     const dispatch = useDispatch();
     const [show, setShow] = useState(false);
-    const [showSub, setShowSub] = useState(false);
+    const [showSub, setShowSub] = useState(true);
 
     const  hash  = useLocation();
 
