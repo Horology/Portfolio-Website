@@ -8,10 +8,12 @@
   justify-content: space-between;
   align-items: center;
   z-index: 5;
-  background: rgb(26, 20, 54);
+  h2 {
+    color: rgb(8, 47, 131);
+  }
   border-bottom: 0.5 solid white;
-  @media screen and (min-width: 960px) {
-    border-style: none;
+  @media screen and (max-width: 960px) {
+    background: rgb(26, 20, 54);
   }
 }
 
@@ -32,14 +34,14 @@
     border 0.25s;
   transition: width 2s, height 2s, background-color 1s, transform 1s,
     border 0.25s;
-  color: rgb(113, 107, 156);
+  color: rgb(8, 47, 131);
 
   svg {
     display: block;
     text-align: center;
   }
   &:hover {
-    color: rgba($color: #ddd6d6, $alpha: 1);
+    color: white;
     border: 3px solid rgba(255, 255, 255, 0.5);
     border-image: linear-gradient(45deg, red, blue) 1;
     border-radius: 1rem;
@@ -49,7 +51,7 @@
 
 .navbar-transition {
   position: relative;
-  color: #716b9c;
+  color: rgb(8, 47, 131);
   margin: 0 1rem;
   padding: 1rem;
   svg {

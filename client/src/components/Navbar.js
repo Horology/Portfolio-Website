@@ -33,7 +33,8 @@ const Navbar = () => {
         <>
             <div className="navbar">
                 <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: 'center' }}>
-                    <Link to = '/#about'><img className='profile-pic' src = {Logo}/></Link>
+                    {/* <Link to = '/#about'><img className='profile-pic' src = {Logo}/></Link> */} 
+                    <h2>HOU</h2>
                 </Box> 
                 <Box sx={{ flexGrow: 1, align: "center", margin: 0 }}> 
                     <h1 className = 'title' > Hou </h1>

@@ -900,18 +900,16 @@ Variables
 }
 
 .image-container {
-  height: 30em;
+  height: 20em;
   background: #0a2f31;
   z-index: -3;
   overflow: hidden;
+  object-fit: cover;
 }
 
-.vid-container {
-  height: 100%;
-  width: 100%;
-}
-
-#canvas {
+.hero {
+  object-fit: cover;
+  -o-object-fit: cover;
   height: 100%;
   width: 100%;
 }
@@ -1138,11 +1136,19 @@ Variables
   }
 }
 
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #f3f7fb;
+  box-shadow: 0 0 2rem 0 #f3f7fb;
+}
+
 .introduction {
   padding: 50px;
   position: relative;
-  background-color: var(--background-color);
   max-width: var(--max-width);
+  margin: auto;
 }
 
 .introduction h5 {
@@ -1741,20 +1747,20 @@ Variables
   display: flex;
   flex-direction: column;
   position: absolute;
-  background-color: #1a1436;
+  background-color: rgba(255, 255, 255, 0.1);
   border-top: none;
   top: 100%;
-  border-bottom-left-radius: .5rem;
-  border-bottom-right-radius: .5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
   padding: 1rem;
   transform: translateX(-20%);
 }
 
 .submenu-container .work {
   text-align: center;
-  margin: .25rem .25rem;
-  border-radius: .125rem;
-  color: #716b9c;
+  margin: 0.25rem 0.25rem;
+  border-radius: 0.125rem;
+  color: #082f83;
 }
 
 .submenu-container .work:hover {
@@ -1796,13 +1802,16 @@ Variables
   justify-content: space-between;
   align-items: center;
   z-index: 5;
-  background: #1a1436;
   border-bottom: 0.5 solid white;
 }
 
-@media screen and (min-width: 960px) {
+.navbar h2 {
+  color: #082f83;
+}
+
+@media screen and (max-width: 960px) {
   .navbar {
-    border-style: none;
+    background: #1a1436;
   }
 }
 
@@ -1820,7 +1829,7 @@ Variables
   text-align: center;
   justify-content: center;
   transition: width 2s, height 2s, background-color 1s, transform 1s, border 0.25s;
-  color: #716b9c;
+  color: #082f83;
 }
 
 .navbar-button svg {
@@ -1829,7 +1838,7 @@ Variables
 }
 
 .navbar-button:hover {
-  color: #ddd6d6;
+  color: white;
   border: 3px solid rgba(255, 255, 255, 0.5);
   border-image: linear-gradient(45deg, red, blue) 1;
   border-radius: 1rem;
@@ -1838,7 +1847,7 @@ Variables
 
 .navbar-transition {
   position: relative;
-  color: #716b9c;
+  color: #082f83;
   margin: 0 1rem;
   padding: 1rem;
 }
@@ -1951,13 +1960,13 @@ Variables
 .wave svg {
   position: relative;
   display: block;
-  width: calc(154% + 1.3px);
-  height: 118px;
+  width: calc(148% + 1.3px);
+  height: 101px;
   transform: rotateY(180deg);
 }
 
 .wave .shape-fill {
-  fill: #d4f1f4;
+  fill: #f3f7fb;
 }
 
 .wave2 {
