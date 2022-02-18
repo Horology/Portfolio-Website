@@ -18,7 +18,7 @@ const Home = ({isVisible}) => {
         <>
             <ImageOverlay/>
             <div align = 'center'> 
-                <div className = 'intro-container'>
+                <div id = "intro" className = 'intro-container'>
                     <Introduction />
                     <TopWave />
                 </div>

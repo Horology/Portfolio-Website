@@ -8,7 +8,6 @@ import socialLinks from '../constants/social_links';
 
 const Introduction = () => {
   return <div className = 'introduction'>
-        <h1 className = 'title-header' >Welcome!</h1>
         <br />
         <Synopsis />
         <h4></h4>

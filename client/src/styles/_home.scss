@@ -3,9 +3,33 @@
 .image-container {
   height: 50em;
   background: rgb(10, 47, 49);
-  z-index: -3;
   overflow: hidden;
   object-fit: cover;
+}
+
+.go-down {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  top: 70%;
+  color: black;
+  z-index: 1000000;
+  &:hover {
+    cursor: pointer;
+    animation: up-down 3s linear infinite;
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translate(-50%, -20%);
+  }
+  50% {
+    transform: translate(-50%, 20%);
+  }
+  100% {
+    transform: translate(-50%, -20%);
+  }
 }
 
 .hero {
@@ -13,6 +37,13 @@
   -o-object-fit: cover;
   height: 100%;
   width: 100%;
+}
+.hero-text {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 50%;
+  font-size: 4.5rem;
 }
 
 // running Pikachu
