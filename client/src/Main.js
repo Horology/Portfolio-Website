@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import {HashRouter, Routes ,Route, Link } from 'react-router-dom';
+import { Routes ,Route, Link } from 'react-router-dom';
 import { AppBar} from '@material-ui/core';
 import Contacts from './pages/Contacts.js';
 import Home from './pages/Home.js';
@@ -9,6 +9,7 @@ import Navbar from './components/Navbar.js';
 import Footer from './components/Footer.js';
 import { useSelector} from 'react-redux';
 import pageLinks from './constants/links.js';
+import ProjectPage from './pages/ProjectPage';
 
 
   export const useElementOnScreen = (options) => {
@@ -64,6 +65,7 @@ const Main = () => {
                     <Route path = "/contacts" element = {<Contacts/>}/> 
                     <Route path = "/art/" element = {<Art/>}/>
                     <Route path = "/code/" element = {<Code/>}/>
+                    <Route path = "/code/:id" element = {<ProjectPage />}/>
                   </Routes>
             </AppBar>
 

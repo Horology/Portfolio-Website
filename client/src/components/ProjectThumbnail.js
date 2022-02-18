@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import {BsFillDoorClosedFill,BsFillDoorOpenFill} from 'react-icons/bs';
 import {AiFillGithub} from 'react-icons/ai';
 
-export default function ProjectThumbnail({title, git, description, image, link, date, tech}) {
+export default function ProjectThumbnail({id, title, git, description, image, link, date, tech}) {
     const[show, setShow] = useState(false);
 
   return (
@@ -17,7 +17,6 @@ export default function ProjectThumbnail({title, git, description, image, link, 
             </div >
             <div>
                 <div className = 'date'> {date}</div>
-                {/* <div> {link}</div>  */}
             </div>
             <div className = 'techs'>
                 {tech && tech.map((t) =>{
@@ -30,9 +29,9 @@ export default function ProjectThumbnail({title, git, description, image, link, 
                 <a href={git}>
                     <AiFillGithub size = {45}/>
                 </a>
-                <button>
+                <Link to = {`/code/${id}`}>
                     Learn More
-                </button>
+                </Link>
                 <a href={link} onMouseEnter = {() => {setShow(true)}}
                 onMouseLeave = {() => {setShow(false)}}>
                     {show && show?<BsFillDoorOpenFill size = {45}/>: <BsFillDoorClosedFill size = {45}/>}

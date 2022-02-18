@@ -4,6 +4,7 @@ import {default as photoTodo} from '../img/thumbnails/todo-thumbnail.PNG'
 import {default as photoMovie} from '../img/thumbnails/movie-thumbnail.PNG'
 import {default as photoCommerce} from '../img/thumbnails/commerce-thumbnail.PNG'
 import {default as photoPort} from '../img/thumbnails/port-thumbnail.PNG'
+import details from './details.js'
 
 const project_links = [
     {
@@ -68,5 +69,8 @@ const project_links = [
     },
 
 ]
+for(let i = 0; i < details.length, i++;){
+    project_links["detail"].add(details[i])
+}
 
 export default project_links;

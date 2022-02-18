@@ -1,7 +1,8 @@
 import React from 'react';
 import ProjectThumbnail from '../components/ProjectThumbnail';
+
 import {Paper, Grid} from '@material-ui/core';
-import project_links from '../constants/project_links.js'
+import project_links from '../constants/project_links.js';
 
 
 const Code = () => {
@@ -18,6 +19,7 @@ const Code = () => {
                     return(
                     <Grid key ={project.id} item xs={12} sm={6} md={4} lg={4} xl={3} >
                     <ProjectThumbnail 
+                    id = {project.id}
                     title = {project.title}
                     image = {project.image}
                     date = {project.date}
