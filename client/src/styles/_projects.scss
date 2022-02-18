@@ -24,12 +24,14 @@
 .projects-container {
   padding: 50px;
   max-width: var(--max-width);
+  padding-bottom: 3rem;
 }
 
 .project-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 3rem;
   @media screen and (max-width: 800px) {
     flex-direction: column;
   }

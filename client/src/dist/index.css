@@ -1639,12 +1639,14 @@ Variables
 .projects-container {
   padding: 50px;
   max-width: var(--max-width);
+  padding-bottom: 3rem;
 }
 
 .project-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 3rem;
 }
 
 @media screen and (max-width: 800px) {
@@ -1994,5 +1996,103 @@ Variables
 
 .slope .shape-fill {
   fill: #ffffff;
+}
+
+.project-thumbnail {
+  transition: var(--transition);
+  background: lightblue;
+  border-radius: var(--radius);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  height: 20rem;
+}
+
+.project-thumbnail:hover {
+  transform: scale(1.05);
+  transition: all 0.5s;
+}
+
+.project-thumbnail .thumbnail-img {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 10rem;
+}
+
+.project-thumbnail .thumbnail-img:hover:before {
+  opacity: 0;
+}
+
+.project-thumbnail .thumbnail-img:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.25;
+  content: "";
+  background: navy;
+}
+
+.project-thumbnail .thumbnail-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.project-thumbnail .proj-name {
+  margin: 0;
+}
+
+.project-thumbnail .date {
+  margin-bottom: 0.5rem;
+}
+
+.project-thumbnail .techs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto;
+  margin-bottom: 0.5rem;
+  width: 75%;
+  color: grey;
+}
+
+.project-thumbnail .techs div {
+  background: white;
+  opacity: 0.8;
+  border-radius: 5%;
+  padding: 0.1rem 0.5rem;
+}
+
+.project-thumbnail .project-disc {
+  padding: 0.5rem 1rem;
+  display: grid;
+  height: 100%;
+  grid-template-rows: 1fr auto 1fr auto;
+}
+
+.project-thumbnail .web-links {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.project-thumbnail .web-links *:hover {
+  border-radius: 10%;
+}
+
+.project-thumbnail .web-links button {
+  color: grey;
+}
+
+.project-thumbnail .web-links button:hover {
+  color: white;
+}
+
+.project-thumbnail .web-links svg:hover {
+  fill: white;
+  transform: scale(1.1);
 }
 /*# sourceMappingURL=index.css.map */

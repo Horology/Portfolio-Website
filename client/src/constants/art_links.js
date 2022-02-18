@@ -1,3 +1,6 @@
+import {FaFacebookSquare, FaLinkedin, FaDribbbleSquare, FaBehanceSquare, FaTwitterSquare} from 'react-icons/fa'
+
+
 const data = [
     {
       id: 1,
