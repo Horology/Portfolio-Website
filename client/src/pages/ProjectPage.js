@@ -8,8 +8,7 @@ const ProjectPage = () => {
   const {id} = useParams();
   const [info, setInfo] = useState();
   useLayoutEffect(() =>{
-    setInfo(project_links[id])
-    console.log(project_links[id])
+    setInfo(project_links[id-1])
   }, [])
 
 
@@ -26,7 +25,7 @@ const ProjectPage = () => {
         <p>Github Link: {info.git}</p>
         <p>Website Link: {info.link}</p>
         {/* <p>{info.description}</p> */}
-        <p>{details[id]}</p>
+        <p>{details[id-1]}</p>
       </div>}
     </>
   )
