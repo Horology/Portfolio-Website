@@ -45,7 +45,7 @@ const Contacts = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if(!(/.+@.+\.[A-Za-z]+$/.test(message['email']))){
-      setHelperMessage('Please enter a valid email')
+      setHelperMessage('Please enter a valid email ')
       return
     }
     setHelperMessage('')
