@@ -31,7 +31,6 @@ const initialForm = {
 }
 
 const Contacts = () => {
-  const dispatch = useDispatch();
   const [message, setMessage] = useState(initialForm);
   const [helperMessage, setHelperMessage] = useState(''); 
   const [disableButton, setDisableButton] = useState(0);
@@ -45,10 +44,11 @@ const Contacts = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if( !message['firstName']||!message['lastName']||!message['email']|| !message['message']){
-      setHelperMessage('One of the required inputs are not filled')
-      // setTimeout(() => {setHelperMessage('')}, 3000);
+    if(!(/.+@.+\.[A-Za-z]+$/.test(message['email']))){
+      setHelperMessage('Please enter a valid email')
+      return
     }
+    setHelperMessage('')
     createPost(message);
     setMessage(initialForm);
   }
@@ -69,11 +69,7 @@ const Contacts = () => {
 
 
     return(
-      // <>
-      //   <form action = '/signup' method = 'post'>
 
-      //   </form>
-      // </>
       <ThemeProvider theme = {theme}>
             <div className = ' contact margin' style={{ background: 'skyblue', paddingTop:'5rem'}}>
               <Container>
@@ -144,6 +140,7 @@ const Contacts = () => {
                   Sent Message
                   </Button>
                 </Box>
+                <h3>{helperMessage}</h3>
               </Container>
             </div>  
       </ThemeProvider>
