@@ -7,7 +7,7 @@ const ImageOverlay = () => {
   
     
   return <div className = 'image-container'>
-      <video className = 'hero' src = {'videos/hero.mov'} autoPlay loop muted type = 'video/mp4'><a href="https://www.vecteezy.com/video/1625419-clouds-and-sky-animated-background">Clouds and sky animated background Stock Videos by Vecteezy</a></video>
+      <video className = 'hero' src = {'videos/hero.mp4'} autoPlay loop muted type = 'video/mp4'><a href="https://www.vecteezy.com/video/1625419-clouds-and-sky-animated-background">Clouds and sky animated background Stock Videos by Vecteezy</a></video>
       <Link  to = "intro" spy = {true} smooth = {true} className = 'go-down'>
         <Md value = {{color: 'navy'}} size = {70}/>
       </Link>
