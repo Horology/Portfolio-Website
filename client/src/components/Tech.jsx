@@ -77,7 +77,7 @@ const Title = styled.h2`
 `;
 
 const Container = styled.div`
-	border-bottom: 3px solid white;
+	background: rgba(255, 255, 255, 0.1);
 	padding: 0.5em;
 	padding-bottom: 3em;
 	width: 100%;
@@ -105,6 +105,7 @@ const Carousel = styled.div`
 	scroll-behavior: smooth;
 	gap: 16px;
 	width: 80%;
+	margin-bottom: 1rem;
 
 	&&::-webkit-scrollbar {
 		display: none;

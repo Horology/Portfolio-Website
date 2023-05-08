@@ -17,7 +17,6 @@ const Home = ({ showModal, onCloseModal }) => {
 					<Arrow />
 					<About />
 					<Tech />
-					<Arrow />
 					<Projects />
 				</>
 			)}
