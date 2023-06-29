@@ -67,6 +67,7 @@ const Gradient = styled.div`
 	transform: translateY(-50%);
 	height: 100vh;
 	width: 100vw;
+	filter: blur(10px);
 `;
 
 const Text = styled.div`

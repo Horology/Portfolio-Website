@@ -45,16 +45,22 @@ const Thumbnail = styled.div`
 	height: 500px;
 	aspect-ratio: 1;
 	cursor: pointer;
-	transition: opacity 2s, height 2s, background-color 2s, rotate 2s;
+	transition: opacity 2s, height 2s, background-color 2s, transform 0.5s;
 
 	div {
 		visibility: collapse;
 	}
+
 	img {
 		opacity: 1;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
 
 	&:hover {
+		transform: translateY(-10px);
+		border: 1px solid white;
 		div {
 			visibility: visible;
 			transition: visibility 0.5s;
@@ -71,7 +77,7 @@ const Title = styled.h1`
 	color: var(--dim-yellow);
 	text-decoration: underline;
 	opacity: 0.8;
-	margin-bottom: 2rem;
+	margin-bottom: 3rem;
 `;
 
 const Row = styled.div`

@@ -1,5 +1,4 @@
 import React from "react";
-// import AboutMeButton from "../components/AboutMeButton";
 // import aboutme_descriptions from "../constants/aboutme_descriptions";
 import Status from "../components/Status";
 import socialLinks from "../constants/social_links";
@@ -36,11 +35,6 @@ const About = () => {
 					<Status />
 				</Table>
 			</Introduction>
-			{/* <AboutContainer>
-				{aboutme_descriptions.map((data) => {
-					return <AboutMeButton text={data.description} />;
-				})}
-			</AboutContainer> */}
 		</Container>
 	);
 };
@@ -63,12 +57,13 @@ const SpanText = styled.div`
 const Row = styled.div`
 	display: flex;
 	justify-content: space-between;
-	padding: 0.2em;
+	align-items: center;
+	margin: 1rem;
 `;
 const Label = styled.div`
 	border: 0.1em solid var(--dim-yellow);
 	color: var(--dim-yellow);
-	padding: 0.2em;
+	padding: 0.5em;
 `;
 
 const Description = styled.div`

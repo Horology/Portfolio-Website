@@ -54,13 +54,17 @@ const Navbar = (props) => {
 						{timeline.map((event, i) => (
 							<Segment key={i}>
 								<Location onClick={() => setSelectedTime(i)}>
-									<FaDotCircle size={20} color={"var(--dim-yellow)"} />
+									<Circle size={20} color={"var(--white)"} />
 									<Details selected={i === selectedTime}> {event.text}</Details>
 								</Location>
 								<Length />
 							</Segment>
 						))}
-						<AiOutlineArrowDown size={35} color={"var(--dim-yellow)"} />
+						<AiOutlineArrowDown
+							size={35}
+							color={"var(--white)"}
+							opacity={0.5}
+						/>
 					</Timeline>
 				</Columns>
 			</Row>
@@ -70,14 +74,24 @@ const Navbar = (props) => {
 
 export default Navbar;
 
+const Circle = styled(FaDotCircle)`
+	opacity: 0.5;
+	&:hover {
+		transform: translateX(10px);
+		transition: transform 1s;
+		opacity: 1;
+	}
+`;
+
 const Details = styled.div`
 	position: absolute;
 	top: 50%;
 	left: 100%;
 	width: ${(props) => (props.selected ? 220 : 0)}px;
 	opacity: ${(props) => (props.selected ? 1 : 0)};
+	height: ${(props) => (props.selected ? "fit-content" : "10px")};
 	transform: translate(0%, -50%);
-	transition: width 0.5s;
+	transition: width 0.5s, opacity 1s, height 0.5s;
 	pointer-events: none;
 	background: rgba(126, 137, 173, 0.5);
 	padding: 0.2rem;
@@ -140,9 +154,9 @@ const Button = styled.button`
 	white-space: nowrap;
 	font-size: 24px;
 	user-select: none;
+	opacity: 0.5;
 
-	transition: width 2s, height 2s, background-color 1s, transform 1s,
-		border 0.25s;
+	transition: width 0.5s, height 0.5s, background-color 1s, border 0.25s;
 	color: var(--white);
 	transform: rotate(-90deg);
 	pointer-events: auto;
@@ -159,29 +173,10 @@ const Button = styled.button`
 	&:hover {
 		color: white;
 		border: 3px solid rgba(255, 255, 255, 0.5);
-		border-image: linear-gradient(45deg, var(--white), var(black-blue)) 1;
 		border-radius: 0.1rem;
-		animation: fade-in 3s;
+		transition: opacity 0.5s, padding 0.5s;
+		padding: 0.5rem 1rem;
 		opacity: 1;
-	}
-
-	//Sidebar styling
-	@keyframes fade-in {
-		from {
-			opacity: 0.5;
-		}
-		to {
-			opacity: 1;
-		}
-	}
-
-	@keyframes fade-out {
-		from {
-			opacity: 1;
-		}
-		to {
-			opacity: 0;
-		}
 	}
 `;
 
@@ -197,9 +192,10 @@ const Length = styled.div`
 	margin: 0;
 	height: 50px;
 	width: 0.2rem;
-	border-color: yellow;
+	border-color: white;
 	border-width: 0;
 	border-style: dashed;
+	opacity: 0.5;
 	border-left-width: 0.2rem;
 	pointer-events: none;
 `;

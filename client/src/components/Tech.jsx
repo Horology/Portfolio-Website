@@ -65,7 +65,7 @@ const Skills = () => {
 					</Carousel>
 				</>
 			)}
-			{itemId !== -1 && <Description id={itemId} />}
+			<Description id={itemId} />
 		</Container>
 	);
 };
@@ -74,11 +74,12 @@ export default Skills;
 
 const Title = styled.h2`
 	color: var(--dim-yellow);
+	margin-bottom: 40px;
 `;
 
 const Container = styled.div`
-	background: rgba(255, 255, 255, 0.1);
 	padding: 0.5em;
+	margin-top: 10em;
 	padding-bottom: 3em;
 	width: 100%;
 	opacity: 1;
@@ -93,6 +94,11 @@ const Button = styled.div`
 	width: 200px;
 	aspect-ratio: 1;
 	cursor: pointer;
+	padding: 30px;
+
+	&:hover {
+		background: white;
+	}
 `;
 
 const Carousel = styled.div`

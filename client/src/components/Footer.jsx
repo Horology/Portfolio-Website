@@ -1,4 +1,3 @@
-import React from "react";
 import socialLinks from "../constants/social_links";
 import styled from "styled-components";
 
