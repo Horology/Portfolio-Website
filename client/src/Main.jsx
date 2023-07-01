@@ -5,7 +5,6 @@ import Art from "./pages/Art";
 import Code from "./pages/Code";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import ProjectPage from "./pages/ProjectPage";
 import styled from "styled-components";
 
 const Main = () => {
@@ -26,7 +25,6 @@ const Main = () => {
 				/>
 				<Route path="/art/" element={<Art />} />
 				<Route path="/code/" element={<Code />} />
-				<Route path="/code/:id" element={<ProjectPage />} />
 			</Routes>
 			<Footer />
 		</Container>

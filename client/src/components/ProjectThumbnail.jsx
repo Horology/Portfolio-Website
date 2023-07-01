@@ -4,7 +4,6 @@ import { AiFillGithub } from "react-icons/ai";
 import styled from "styled-components";
 
 export default function ProjectThumbnail({
-	id,
 	title,
 	git,
 	image,
@@ -22,14 +21,13 @@ export default function ProjectThumbnail({
 			<h3> {title}</h3>
 			<div> {date}</div>
 			<Tech>
-				{tech &&
-					tech.map((t) => {
-						return <div>{t}</div>;
-					})}
+				{tech.map((t) => {
+					return <div>{t}</div>;
+				})}
 			</Tech>
 			<URL>
 				<a href={git}>
-					<AiFillGithub size={45} />
+					<AiFillGithub size={30} />
 				</a>
 				{/* <Link to={`/code/${id}`}>Learn More</Link> */}
 				<a
@@ -42,9 +40,9 @@ export default function ProjectThumbnail({
 					}}
 				>
 					{show && show ? (
-						<BsFillDoorOpenFill size={45} />
+						<BsFillDoorOpenFill size={30} />
 					) : (
-						<BsFillDoorClosedFill size={45} />
+						<BsFillDoorClosedFill size={30} />
 					)}
 				</a>
 			</URL>
@@ -56,8 +54,9 @@ const Article = styled.article`
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
+	text-align: center;
+	padding-top: 2rem;
 	align-items: center;
-	padding: 2rem;
 	border-radius: 1rem;
 	transition: transform 0.3s, -webkit-transform 0.3s;
 	width: 80%;
@@ -70,7 +69,12 @@ const Article = styled.article`
 	}
 
 	* {
-		color: white;
+		color: var(--white);
+	}
+
+	div {
+		font-size: 11px;
+		color: var(--teal);
 	}
 	cursor: pointer;
 	border: 1px solid var(--white);
@@ -80,10 +84,16 @@ const Article = styled.article`
 const Tech = styled.div`
 	display: flex;
 
-	justify-content: space-between;
+	justify-content: center;
 	margin-bottom: 0.5rem;
-	width: 75%;
-
+	gap: 2px;
+	width: 95%;
+	div {
+		background: var(--teal);
+		color: white;
+		padding: 0 0.2rem;
+		border-radius: 0.5rem;
+	}
 	overflow: hidden;
 `;
 
@@ -95,7 +105,7 @@ const Image = styled.div`
 	position: relative;
 	overflow: hidden;
 	width: 100%;
-	height: 10rem;
+	height: 5rem;
 
 	&:hover {
 		opacity: 0.8;
@@ -105,6 +115,5 @@ const Image = styled.div`
 const Img = styled.img`
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
-	object-position: center center;
+	object-fit: contain;
 `;

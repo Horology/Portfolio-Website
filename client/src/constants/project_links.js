@@ -4,6 +4,12 @@ import { default as photoTodo } from "../components/img/thumbnails/todo-thumbnai
 import { default as photoMovie } from "../components/img/thumbnails/movie-thumbnail.PNG";
 import { default as photoCommerce } from "../components/img/thumbnails/commerce-thumbnail.PNG";
 import { default as photoPort } from "../components/img/thumbnails/port-thumbnail.PNG";
+import { default as svg } from "../components/img/thumbnails/svg-thumbnail.png";
+import { default as coordinates } from "../components/img/thumbnails/coordinates.png";
+import { default as editor } from "../components/img/thumbnails/editor.png";
+import { default as grid } from "../components/img/thumbnails/grid.png";
+import { default as chords } from "../components/img/thumbnails/chords.png";
+import { default as trivia } from "../components/img/thumbnails/trivia.png";
 
 const project_links = [
 	{
@@ -69,6 +75,67 @@ const project_links = [
 			"Created a GUI to send queries to and get responsese from a MySQL database. Used Typescript to improve codebase. It's currently only stored in the Github repository. Will use Heroku/ Netlify to deploy them in the server.",
 		git: "https://github.com/Horology/Employee-Management",
 		link: "https://github.com/Horology/Employee-Management",
+	},
+	{
+		id: 7,
+		title: "Animal Crossing Trivia",
+		image: trivia,
+		date: " Mar 8, 2022",
+		tech: ["React"],
+		description: "",
+		git: "https://hou-ac-map-trivia.netlify.app",
+		link: "https://hou-ac-map-trivia.netlify.app",
+	},
+
+	{
+		id: 8,
+		title: "Chord Editor",
+		image: chords,
+		date: "Jan 10, 2023",
+		tech: ["React"],
+		description: "",
+		git: "https://github.com/houchongchan/chord-editor",
+		link: "https://chords-editor.netlify.app",
+	},
+	{
+		id: 9,
+		title: "Polygon Editor",
+		image: editor,
+		date: "Jan 31, 2023",
+		tech: ["React"],
+		description: "",
+		git: "https://github.com/houchongchan/PolygonEditor",
+		link: "https://test-polygon.netlify.app",
+	},
+	{
+		id: 10,
+		title: "Image Grid Cropper",
+		image: grid,
+		date: "Feb 26, 2023",
+		tech: ["React"],
+		description: "",
+		git: "https://github.com/houchongchan/Image-Grid-Cropper",
+		link: "https://image-grid-cropper.netlify.app",
+	},
+	{
+		id: 11,
+		title: "SVG Editor",
+		image: svg,
+		date: "Mar 10, 2023",
+		tech: ["React"],
+		description: "",
+		git: "https://github.com/houchongchan/svg-editor",
+		link: "https://svg-ui-editor.netlify.app/",
+	},
+	{
+		id: 12,
+		title: "Polygon Coordinate Marker",
+		image: coordinates,
+		date: "May 7, 2023",
+		tech: ["React"],
+		description: "",
+		git: "https://github.com/houchongchan/polygon-coordinate-generator",
+		link: "https://polygon-coordinate-marker.netlify.app",
 	},
 ];
 

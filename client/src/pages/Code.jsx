@@ -11,11 +11,10 @@ const Code = () => {
 			<ThumbnailContainer>
 				<Grid container spacing={6} columns={{ xs: 12, sm: 3 }}>
 					{project_links &&
-						project_links.map((project) => {
+						project_links.reverse().map((project) => {
 							return (
 								<Grid key={project.id} item xs={12} sm={6} md={4} lg={4} xl={3}>
 									<ProjectThumbnail
-										id={project.id}
 										title={project.title}
 										image={project.image}
 										date={project.date}
@@ -35,7 +34,7 @@ const Code = () => {
 
 export default Code;
 
-const Title = styled.h1`
+const Title = styled.h2`
 	color: var(--dim-yellow);
 	text-align: center;
 	margin: 2rem;

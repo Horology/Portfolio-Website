@@ -6,49 +6,6 @@ Variables
 
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap");
 
-:root {
-	/* Blue Text color */
-	--blue-text: rgb(10, 10, 83);
-	--blue-text-hover: #bff8fd;
-	--blue-text-background: rgba(104, 82, 231, 0.25);
-	--blue-text-background-hover: rgba(82, 11, 139, 0.5);
-	/* primary color */
-	--primary-text-color: #160f29;
-	--primary-text-color2: #246a73;
-	--background-color: #d4f1f4;
-	--background-color2: #e0fcff;
-	--background-color3: #368f8b;
-	--black-blue: #000814;
-	--navy: #001f54;
-	--blue: #034078;
-	--teal: #1282a2;
-	--white: #fefcfb;
-	--dim-yellow: #ffc300;
-	--yellow: #ffd60a;
-	/* secondary color */
-	--secondary-color: #ddbea8;
-	--secondary-color2: #f3dfc1;
-	--secondary-color3: #75e6da;
-	/* span text */
-	--span-text: orange;
-	/* grey used for paragraphs */
-	--clr-grey-5: hsl(210, 22%, 49%);
-	/* responsive text colors*/
-	--highlighted-text: rgb(153, 197, 22);
-	--highlighted-text-hover: rgb(246, 255, 224);
-	--highlighted-background: rgba(126, 137, 173, 0.5);
-	--clr-black: #222;
-	--ff-primary: "Roboto", sans-serif;
-	--ff-secondary: "Open Sans", sans-serif;
-	--transition: all 0.3s linear;
-	--spacing: 0.1rem;
-	--radius: 0.25rem;
-	--light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-	--dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-	--max-width: 1170px;
-	--fixed-width: 620px;
-}
-
 *,
 ::after,
 ::before {
@@ -57,8 +14,6 @@ Variables
 	box-sizing: border-box;
 	text-decoration: none;
 	user-select: none;
-	-webkit-user-select: text;
-	-ms-user-select: text;
 }
 
 p {
@@ -74,7 +29,7 @@ button {
 
 /* width */
 ::-webkit-scrollbar {
-	width: 10px;
+	width: 5px;
 }
 
 /* Track */
@@ -85,7 +40,7 @@ button {
 /* Handle */
 ::-webkit-scrollbar-thumb {
 	background: white;
-	border-radius: 5px;
+	border-radius: 2.5px;
 }
 
 /* Handle on hover */
@@ -170,15 +125,6 @@ body {
 
 button {
 	font-family: "Source Code Pro";
-}
-
-* {
-	user-select: none;
-}
-
-.App {
-	font-family: sans-serif;
-	text-align: center;
 }
 
 img {
