@@ -2,7 +2,7 @@ import React from "react";
 import About from "./About";
 import Tech from "../components/Tech";
 import Projects from "./Projects";
-import { Arrow } from "../components/Transition";
+import ParallaxDisplay from "./ParallaxDisplay";
 import ContactModal from "../components/ContactModal";
 import WelcomePage from "../components/WelcomePage";
 import styled from "styled-components";
@@ -14,7 +14,7 @@ const Home = ({ showModal, onCloseModal }) => {
 			<WelcomePage />
 			{!showModal && (
 				<>
-					<Arrow />
+					<ParallaxDisplay />
 					<About />
 					<Tech />
 					<Projects />
@@ -27,7 +27,7 @@ const Home = ({ showModal, onCloseModal }) => {
 export default Home;
 
 const Container = styled.div`
-	display: flex;
+	parallaxdisplay: flex;
 	flex-direction: column;
 	align-items: center;
 	width: 100%;

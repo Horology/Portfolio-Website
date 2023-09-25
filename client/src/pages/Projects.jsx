@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import pageLinks from "../constants/links.js";
+import pageLinks from "../configs/links.js";
 import { default as photo } from "../components/img/codingPhoto.jpg";
 import { default as photo2 } from "../components/img/link_aegislash2.png";
 import styled from "styled-components";
@@ -31,6 +31,7 @@ export default Projects;
 
 const Container = styled.div`
 	padding: 50px;
+	padding-top: 0px;
 	padding-bottom: 3rem;
 	width: 100%;
 	height: 50%;

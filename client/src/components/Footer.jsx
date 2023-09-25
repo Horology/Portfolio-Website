@@ -1,4 +1,4 @@
-import socialLinks from "../constants/social_links";
+import socialLinks from "../configs/social_links";
 import styled from "styled-components";
 
 const Footer = () => {

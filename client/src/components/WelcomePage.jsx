@@ -28,7 +28,6 @@ const WelcomePage = () => {
 	return (
 		<Container>
 			<Text>{displayedText}</Text>
-			<Gradient />
 			{textRef.current.length < positionRef.current && (
 				<Button>
 					<HashLink smooth to="/#about">
@@ -44,30 +43,32 @@ export default WelcomePage;
 
 const Container = styled.div`
 	padding-top: 200px;
+	position: relative;
+	top: 0;
 	height: 100vh;
 	width: 100vw;
 	background: var(--bluish-black);
-	border-bottom: 3px solid var(--secondary-color3);
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	flex-direction: column;
 	align-items: center;
 	position: relative;
-`;
+	overflow: visible;
 
-const Gradient = styled.div`
-	background: black;
-	background: rgb(0, 31, 84);
-	background: radial-gradient(
-		circle,
-		rgba(0, 31, 84, 1) 0%,
-		rgba(0, 8, 20, 1) 48%,
-		rgba(0, 0, 0, 1) 100%
-	);
-	transform: translateY(-50%);
-	height: 100vh;
-	width: 100vw;
-	filter: blur(10px);
+	&::before {
+		content: " ";
+		background: radial-gradient(
+			circle,
+			rgba(0, 31, 84, 1) 0%,
+			rgba(0, 8, 20, 1) 48%,
+			rgba(0, 0, 0, 1) 100%
+		);
+		transform: translateY(-50%);
+		height: 150vh;
+		width: 100vw;
+		filter: blur(10px);
+		position: absolute;
+	}
 `;
 
 const Text = styled.div`
@@ -87,7 +88,8 @@ const Button = styled.div`
 	width: 5rem;
 	height: 5rem;
 	cursor: pointer;
-	position: relative;
+	z-index: 1;
+
 	svg {
 		width: 100%;
 		height: 100%;

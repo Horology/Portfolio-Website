@@ -1,19 +1,47 @@
-import React from "react";
 // import aboutme_descriptions from "../constants/aboutme_descriptions";
 import Status from "../components/Status";
-import socialLinks from "../constants/social_links";
+import socialLinks from "../configs/social_links";
 import styled from "styled-components";
+import { useEffect, useRef, useState } from "react";
 
 const About = () => {
+	const ref = useRef();
+	const [isIntersecting, setIsIntersecting] = useState(false);
+	const [transition, setTransition] = useState(false);
+
+	useEffect(() => {
+		const observer = new IntersectionObserver(([entry]) => {
+			if (entry.isIntersecting) {
+				console.log(entry.isIntersecting);
+				ref.current.scrollIntoView({
+					behavior: "smooth",
+				});
+				setIsIntersecting(true);
+			} else {
+				setIsIntersecting(false);
+			}
+		});
+
+		observer.observe(ref.current);
+		return () => observer.disconnect();
+	}, []);
+
+	useEffect(() => {
+		if (isIntersecting) {
+			setTransition(true);
+		} else {
+			setTransition(false);
+		}
+	}, [isIntersecting]);
+
 	return (
-		<Container id="about">
+		<Container ref={ref} id="about">
 			<Introduction>
-				<Table>
+				<Table transition={transition}>
 					<Row>
 						<Label>Name</Label>
 						<Description>Hou Chong Chan</Description>
 					</Row>
-
 					<Row>
 						<Label>Occupation</Label>
 						<Description>
@@ -40,6 +68,13 @@ const About = () => {
 };
 
 export default About;
+
+const slideIn = ` 			
+	div{
+		transform: translateX(0) !important;
+		opacity: 1 !important;
+	}
+`;
 
 const SpanText = styled.div`
 	color: var(--highlighted-text);
@@ -73,9 +108,23 @@ const Description = styled.div`
 
 const Table = styled.div`
 	width: 75%;
+	* {
+		transition: transform 1s 0.5s, opacity 1.5s 0.5s;
+	}
+	div:first-child {
+		transform: translateX(-500%);
+		opacity: 0;
+	}
+	div:last-child {
+		transform: translateX(500%);
+		opacity: 0;
+	}
+
+	${(props) => props.transition == true && slideIn}
 `;
 
 const Container = styled.div``;
+
 const Introduction = styled.div`
 	padding: 50px;
 	display: flex;

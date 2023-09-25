@@ -10,6 +10,8 @@ import { default as editor } from "../components/img/thumbnails/editor.png";
 import { default as grid } from "../components/img/thumbnails/grid.png";
 import { default as chords } from "../components/img/thumbnails/chords.png";
 import { default as trivia } from "../components/img/thumbnails/trivia.png";
+import { default as animal } from "../components/img/thumbnails/animal.png";
+import { default as jeopardy } from "../components/img/thumbnails/jeopardy.png";
 
 const project_links = [
 	{
@@ -86,13 +88,12 @@ const project_links = [
 		git: "https://hou-ac-map-trivia.netlify.app",
 		link: "https://hou-ac-map-trivia.netlify.app",
 	},
-
 	{
 		id: 8,
 		title: "Chord Editor",
 		image: chords,
-		date: "Jan 10, 2023",
-		tech: ["React"],
+		date: "August 10, 2023",
+		tech: ["React", "Typescript"],
 		description: "",
 		git: "https://github.com/houchongchan/chord-editor",
 		link: "https://chords-editor.netlify.app",
@@ -136,6 +137,25 @@ const project_links = [
 		description: "",
 		git: "https://github.com/houchongchan/polygon-coordinate-generator",
 		link: "https://polygon-coordinate-marker.netlify.app",
+	},
+	{
+		id: 13,
+		title: "Animal Dataset Scraper",
+		image: animal,
+		date: "August 2, 2023",
+		tech: ["Python", "Bash"],
+		description: "",
+		git: "https://github.com/houchongchan/Animal-Dataset-Scraper",
+	},
+	{
+		id: 14,
+		title: "Jeopardy Template Application",
+		image: jeopardy,
+		date: "August 21, 2023",
+		tech: ["Angular", "Typescript"],
+		description: "",
+		git: "https://github.com/houchongchan/Jeopardy-App",
+		link: "https://jeopardy-template.netlify.app/",
 	},
 ];
 

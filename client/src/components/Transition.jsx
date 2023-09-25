@@ -4,31 +4,22 @@ import { ReactComponent as ArrowIcon } from "./svgs/downward.svg";
 
 const Arrow = () => {
 	return (
-		<Section>
-			<ArrowContainer>
-				<ArrowIcon />
-			</ArrowContainer>
-		</Section>
+		<ArrowContainer>
+			<ArrowIcon />
+		</ArrowContainer>
 	);
 };
 
 export { Arrow };
 
 const ArrowContainer = styled.div`
-	position: absolute;
-	top: -5%;
+	background-color: transparent;
+	bottom: 0%;
 	left: 50%;
-	transform: translateX(-50%);
-	background-color: var(--bluish-black);
+	position: absolute;
+	transform: translate(-50%, -50%);
 
 	svg {
 		stroke: var(--secondary-color3);
 	}
-`;
-
-const Section = styled.div`
-	position: relative;
-	width: 100%;
-	height: 100px;
-	width: 100%;
 `;

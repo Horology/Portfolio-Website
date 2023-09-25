@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import pageLinks from "../constants/links.js";
+import pageLinks from "../configs/links.js";
 import { HashLink } from "react-router-hash-link";
 import styled from "styled-components";
-import timeline from "../constants/timeline";
+import timeline from "../configs/timeline.js";
 import { FaDotCircle } from "react-icons/fa";
 import { AiOutlineArrowDown } from "react-icons/ai";
 
@@ -50,7 +50,7 @@ const Navbar = (props) => {
 							</Button>
 						);
 					})}
-					<Timeline onMouseLeave={() => setSelectedTime(-1)}>
+					{/* <Timeline onMouseLeave={() => setSelectedTime(-1)}>
 						{timeline.map((event, i) => (
 							<Segment key={i}>
 								<Location onClick={() => setSelectedTime(i)}>
@@ -65,7 +65,7 @@ const Navbar = (props) => {
 							color={"var(--white)"}
 							opacity={0.5}
 						/>
-					</Timeline>
+					</Timeline> */}
 				</Columns>
 			</Row>
 		</Container>
