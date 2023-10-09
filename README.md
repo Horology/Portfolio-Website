@@ -23,6 +23,17 @@
 * <span style='color:#9F4FEA; font-weight:bold'> Styled Components </span>
 * <span style='color:#9F4FEA; font-weight:bold'> Material UI </span>
 
+## Development
+
+```sh
+# setup
+npm install
+# Development, live reload, JSX transpiling, run:
+yarn start
+```
+
+Port `3000` on all OS by default. Can be set with option -port=8080
+
 
 
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
