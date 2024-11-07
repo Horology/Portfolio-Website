@@ -12,7 +12,6 @@ const About = () => {
 	useEffect(() => {
 		const observer = new IntersectionObserver(([entry]) => {
 			if (entry.isIntersecting) {
-				console.log(entry.isIntersecting);
 				ref.current.scrollIntoView({
 					behavior: "smooth",
 				});
@@ -120,7 +119,7 @@ const Table = styled.div`
 		opacity: 0;
 	}
 
-	${(props) => props.transition == true && slideIn}
+	${(props) => props.transition === true && slideIn}
 `;
 
 const Container = styled.div``;
@@ -159,5 +158,3 @@ const SocialLinks = styled.div`
 		}
 	}
 `;
-
-// const AboutContainer = styled.div``;

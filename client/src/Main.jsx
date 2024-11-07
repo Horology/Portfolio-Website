@@ -5,7 +5,7 @@ import Code from "./pages/Code";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import styled from "styled-components";
-import { useRef, useState, useEffect } from "react";
+import { useState } from "react";
 
 const Main = () => {
 	const [showModal, setShowModal] = useState(false);

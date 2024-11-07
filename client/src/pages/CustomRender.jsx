@@ -58,7 +58,7 @@ const CustomRender = ({ percentage, width, number, multiplier, opacity }) => {
 				multiplier={multiplier}
 				maxHeight={maxHeight}
 			>
-				{number == 0 ? (
+				{number === 0 ? (
 					<CustomRender
 						percentage={percentage}
 						width={width}
@@ -145,7 +145,7 @@ const Border = styled.div.attrs(
 	transition: background 0.5s linear, filter 0.3s ease;
 	box-shadow: 0 0 0 rgba(204, 169, 44, 0.4);
 
-	${({ number }) => number == 3 && `animation: pulse 2s infinite;`}
+	${({ number }) => number === 3 && `animation: pulse 2s infinite;`}
 
 	@keyframes pulse {
 		0% {

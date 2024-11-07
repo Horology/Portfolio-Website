@@ -14,17 +14,20 @@ const data = [
 		text: "Home",
 		url: "/",
 		icon: <FaHome size={45} />,
+		buttonType: 1,
 	},
 	{
 		id: 2,
 		text: "About",
 		url: "/#about",
+		buttonType: 2,
 		icon: <FaPortrait size={45} />,
 	},
 	{
 		id: 3,
 		text: "Projects",
 		url: "projects",
+		buttonType: 2,
 		icon: <FaPencilRuler size={45} />,
 		type: {
 			art: <FaPaintBrush size={30} />,
@@ -39,6 +42,7 @@ const data = [
 		id: 4,
 		text: "Contact",
 		url: "contacts",
+		buttonType: 3,
 		icon: <GiTalk size={45} />,
 	},
 ];
