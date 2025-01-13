@@ -97,7 +97,7 @@ const project_links = [
 		id: 9,
 		title: "SVG Editor",
 		image: svg,
-		date: "Mar 10, 2024",
+		date: "November 10, 2024",
 		tech: ["React", "Typescript"],
 		description: "",
 		git: "https://github.com/houchongchan/svg-editor",
