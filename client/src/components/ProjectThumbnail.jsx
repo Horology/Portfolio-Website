@@ -29,7 +29,6 @@ export default function ProjectThumbnail({
 				<a href={git}>
 					<AiFillGithub size={30} />
 				</a>
-				{/* <Link to={`/code/${id}`}>Learn More</Link> */}
 				<a
 					href={link}
 					onMouseEnter={() => {
@@ -57,7 +56,7 @@ const Article = styled.article`
 	text-align: center;
 	padding-top: 2rem;
 	align-items: center;
-	border-radius: 1rem;
+	border-radius: 6px;
 	transition: transform 0.3s, -webkit-transform 0.3s;
 	width: 80%;
 	height: 100%;

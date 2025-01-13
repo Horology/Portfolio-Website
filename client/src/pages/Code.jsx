@@ -54,4 +54,5 @@ const Title = styled.h2`
 
 const ThumbnailContainer = styled.div`
 	padding: 4rem;
+	margin-left: 100px;
 `;
