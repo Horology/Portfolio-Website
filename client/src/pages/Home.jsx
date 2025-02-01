@@ -10,7 +10,7 @@ import styled from "styled-components";
 const Home = ({ showModal, onCloseModal }) => {
 	return (
 		<Container>
-			{showModal && <ContactModal onCloseModal={onCloseModal} />}
+			<ContactModal active={showModal} onCloseModal={onCloseModal} />
 			<WelcomePage />
 			{!showModal && (
 				<>

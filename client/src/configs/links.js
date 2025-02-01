@@ -26,7 +26,7 @@ const data = [
 	{
 		id: 3,
 		text: "Projects",
-		url: "projects",
+		url: "/#projects",
 		buttonType: 2,
 		icon: <FaPencilRuler size={45} />,
 		type: {

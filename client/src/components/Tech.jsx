@@ -32,7 +32,7 @@ const Skills = () => {
 			const tmp = [...items.slice(1), items.shift()];
 			setItems(tmp);
 		}
-	}, [time]);
+	}, [time, items]);
 
 	useEffect(() => {
 		if (itemId === -1) return;

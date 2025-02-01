@@ -45,12 +45,7 @@ const Navbar = (props) => {
 					{navTabs.map((e, i) => {
 						if (e.buttonType === 1) {
 							return (
-								<Button
-									onLoad={() => console.log("loaded")}
-									key={i}
-									onClick={handleClick}
-									transition={index > i}
-								>
+								<Button key={i} onClick={handleClick} transition={index > i}>
 									<Link to="/">{e.text}</Link>
 								</Button>
 							);

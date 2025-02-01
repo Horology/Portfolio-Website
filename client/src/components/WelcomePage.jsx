@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { useRef, useState, useEffect } from "react";
 import { GrCaretDown } from "react-icons/gr";
 import { HashLink } from "react-router-hash-link";
+import { Button } from "./CSSComponents";
 
 const WelcomePage = () => {
 	const [displayedText, setDisplayedText] = useState("");
@@ -80,41 +81,4 @@ const Text = styled.div`
 	pointer-events: none;
 	font-size: 24px;
 	width: 100%;
-`;
-
-const Button = styled.div`
-	display: flex;
-	justify-content: center;
-	width: 5rem;
-	height: 5rem;
-	cursor: pointer;
-	z-index: 1;
-
-	svg {
-		width: 100%;
-		height: 100%;
-		fill: white;
-		stroke: white;
-		polygon {
-			stroke: white;
-			stroke-width: 1px;
-			opacity: 0.8;
-		}
-	}
-	position: absolute;
-
-	animation-duration: 1s;
-	animation-name: changeposition;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
-
-	@keyframes changeposition {
-		from {
-			top: 51%;
-		}
-
-		to {
-			top: 50%;
-		}
-	}
 `;

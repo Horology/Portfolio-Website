@@ -86,8 +86,6 @@ const Row = styled.div`
 	justify-content: space-between;
 	align-items: center;
 	width: 80%;
-
-	padding: 0 2rem;
 	padding-bottom: 3rem;
 `;
 

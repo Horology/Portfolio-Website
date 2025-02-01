@@ -10,7 +10,7 @@ const initialForm = {
 	message: "",
 };
 
-const ContactModal = ({ onCloseModal }) => {
+const ContactModal = ({ active, onCloseModal }) => {
 	const [message, setMessage] = useState(initialForm);
 	const [helperMessage, setHelperMessage] = useState("");
 
@@ -38,7 +38,7 @@ const ContactModal = ({ onCloseModal }) => {
 	};
 
 	return (
-		<Container onKeyDown={onKeyPress}>
+		<Container active={active} onKeyDown={onKeyPress}>
 			<Modal>
 				<Row>
 					<Button onClick={onCloseModal}>
@@ -129,11 +129,13 @@ const Container = styled.div`
 	position: absolute;
 	z-index: 50;
 	background: rgba(0, 0, 0, 0.5);
+	visibility: ${({ active }) => (active ? "visibile" : "hidden")};
+	opacity: ${({ active }) => (active ? "1" : "0")};
+	transition: visibility 0s, opacity 0.5s linear;
 `;
 
 const Modal = styled.div`
-	background: var(--highlighted-background);
-	background: var(--background-color3);
+	background: var(--bluish-black);
 	border: 1px solid var(--white);
 	z-index: 50;
 	position: absolute;
@@ -141,7 +143,6 @@ const Modal = styled.div`
 	left: 50%;
 	transform: translate(-50%, -50%);
 	padding: 40px;
-
 	input,
 	input::placeholder,
 	label,
@@ -150,8 +151,8 @@ const Modal = styled.div`
 	div::before,
 	fieldset,
 	* {
-		color: black;
-		border-color: black;
+		color: white;
+		border-color: white;
 	}
 `;
 
