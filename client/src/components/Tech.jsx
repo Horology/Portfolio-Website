@@ -6,20 +6,13 @@ import styled from "styled-components";
 const Skills = () => {
 	const carouselRef = useRef();
 	const containerRef = useRef();
+	const timerRef = useRef();
 	const [items, setItems] = useState([...data]);
 	const [itemId, setItemId] = useState(-1);
-	const [time, setTime] = useState(0);
-
-	useEffect(() => {
-		const timer = setInterval(() => {
-			setTime((prev) => prev + 1);
-		}, 3000);
-		return () => clearInterval(timer);
-	}, []);
 
 	useEffect(() => {
 		if (carouselRef.current && containerRef.current) {
-			requestAnimationFrame(() => {
+			const animate = () => {
 				const carousel = carouselRef.current;
 				const scrollLeft = carousel.scrollLeft;
 				const itemWidth = parseInt(
@@ -27,12 +20,16 @@ const Skills = () => {
 				);
 
 				carouselRef.current.scrollLeft = scrollLeft + itemWidth;
-			});
 
-			const tmp = [...items.slice(1), items.shift()];
-			setItems(tmp);
+				const tmp = [...items.slice(1), items.shift()];
+				setItems(tmp);
+			};
+			clearTimeout(timerRef);
+			timerRef.current = setTimeout(() => {
+				animate();
+			}, 1000);
 		}
-	}, [time, items]);
+	}, [items]);
 
 	useEffect(() => {
 		if (itemId === -1) return;
