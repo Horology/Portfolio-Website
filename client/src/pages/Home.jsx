@@ -1,11 +1,11 @@
 import React from "react";
 import About from "./About";
 import Tech from "../components/Tech";
-import Projects from "./Projects";
 import ParallaxDisplay from "./ParallaxDisplay";
 import ContactModal from "../components/ContactModal";
 import WelcomePage from "../components/WelcomePage";
 import styled from "styled-components";
+import Portfolio from "./Portfolio";
 
 const Home = ({ showModal, onCloseModal }) => {
 	return (
@@ -17,7 +17,7 @@ const Home = ({ showModal, onCloseModal }) => {
 					<ParallaxDisplay />
 					<About />
 					<Tech />
-					<Projects />
+					<Portfolio />
 				</>
 			)}
 		</Container>

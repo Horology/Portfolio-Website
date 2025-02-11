@@ -7,17 +7,18 @@ const CustomRender = ({ percentage, width, number, multiplier, opacity }) => {
 			<Wrapper>
 				<Hou active={percentage > 0.7} />
 				<Position top={30} active={percentage > 0.9}>
-					Mechanical engineering at Cooper Union. Worked on robotics and
-					programming.
+					Bachelor's of Mechanical engineering at Cooper Union. Studied
+					programming and robotics while working on the degree.
 				</Position>
 				<Position top={20} active={percentage > 1}>
-					Started working full stack at Adravision with improving CI & CD
-					pipelines, databases, AGILE, cloud deployments, React front end and
-					Django back ends.
+					Started working Full Stack at Adravision with focusing on improving CI
+					& CD pipelines, querying to databases through Python Django on the
+					back end, implemented visual editor through React front end.
 				</Position>
 				<Position top={10} active={percentage > 1.2}>
-					Worked on creating a Medium-like text editor, AI assistant app, p2p
-					messaging app, and admin portal in Blogbamba.
+					Worked on creating a Medium-like text editor, chatGPT assistant
+					chatbot, p2p messaging platform, and admin portal for database
+					insights in Blogbamba.
 				</Position>
 			</Wrapper>
 		);

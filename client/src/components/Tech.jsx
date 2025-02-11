@@ -9,8 +9,10 @@ const Skills = () => {
 	const timerRef = useRef();
 	const [items, setItems] = useState([...data]);
 	const [itemId, setItemId] = useState(-1);
+	const [hovered, setHovered] = useState(false);
 
 	useEffect(() => {
+		if (hovered) return;
 		if (carouselRef.current && containerRef.current) {
 			const animate = () => {
 				const carousel = carouselRef.current;
@@ -29,7 +31,7 @@ const Skills = () => {
 				animate();
 			}, 1000);
 		}
-	}, [items]);
+	}, [items, hovered]);
 
 	useEffect(() => {
 		if (itemId === -1) return;
@@ -40,12 +42,25 @@ const Skills = () => {
 		return () => clearTimeout(timer);
 	}, [itemId]);
 
+	const onMouseEnter = () => {
+		setHovered(true);
+		clearTimeout(timerRef);
+	};
+
+	const onMouseLeave = () => {
+		setHovered(false);
+	};
+
 	return (
 		<Container ref={containerRef}>
 			{items && (
 				<>
 					<Title> Tech Skills </Title>
-					<Carousel ref={carouselRef}>
+					<Carousel
+						ref={carouselRef}
+						onMouseEnter={onMouseEnter}
+						onMouseLeave={onMouseLeave}
+					>
 						{items.map((logo, i) => {
 							return (
 								<Button
