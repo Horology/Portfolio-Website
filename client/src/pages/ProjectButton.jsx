@@ -3,15 +3,7 @@ import { BsFillDoorClosedFill, BsFillDoorOpenFill } from "react-icons/bs";
 import { AiFillGithub } from "react-icons/ai";
 import styled from "styled-components";
 
-export default function ProjectButton({
-	id,
-	title,
-	git,
-	// image,
-	link,
-	date,
-	tech,
-}) {
+export default function ProjectButton({ id, title, git, link, date, tech }) {
 	const [show, setShow] = useState(false);
 	const [hovered, setHovered] = useState(false);
 
