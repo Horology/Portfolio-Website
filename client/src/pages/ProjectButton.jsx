@@ -21,19 +21,14 @@ export default function ProjectButton({
 			onMouseEnter={() => setHovered(true)}
 			onMouseLeave={() => setHovered(false)}
 		>
-			{/* {image && (
-				<Image>
-					<Img src={image} alt="thumbnail-img" />
-				</Image>
-			)} */}
 			<h3> {title}</h3>
 			<div> {date}</div>
 			<Tech hovered={hovered}>
 				{tech.map((t) => {
-					return <div>{t}</div>;
+					return <div key={t}>{t}</div>;
 				})}
 			</Tech>
-			<URL>
+			<URL hovered={hovered}>
 				<a href={git}>
 					<AiFillGithub size={20} />
 				</a>
@@ -89,10 +84,6 @@ const Container = styled.div`
 		background: #f35f32;
 		background: var(--highlighted-background);
 		text-shadow: 0 0 10px #842508;
-
-		img {
-			filter: none;
-		}
 	}
 `;
 
@@ -115,25 +106,19 @@ const Tech = styled.div`
 const URL = styled.div`
 	width: 100%;
 	padding: 6px;
+	${({ hovered }) => hovered && iconAnimations};
 `;
 
-// const Image = styled.div`
-// 	position: relative;
-// 	overflow: hidden;
-// 	width: 100%;
-// 	height: 5rem;
-// 	display: flex;
-// 	justify-content: center;
+const iconAnimations = `	
+	a:first-child {
+		svg {
+			animation: bounce2 0.75s infinite;
+		}
+	}
 
-// 	&:hover {
-// 		opacity: 0.8;
-// 	}
-// `;
-
-// const Img = styled.img`
-// 	width: 100%;
-// 	height: 100%;
-// 	object-fit: contain;
-// 	opacity: 1;
-// 	filter: invert(100%);
-// `;
+	a:nth-child(2) {
+		svg {
+			animation: bounce2 0.75s 0.35s infinite;
+		}
+	}
+`;

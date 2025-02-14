@@ -4,6 +4,7 @@ import project_links from "../configs/project_links";
 import ProjectButton from "./ProjectButton";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import Art from "./Art";
 
 const Portfolio = () => {
 	const ref = useRef();
@@ -20,9 +21,8 @@ const Portfolio = () => {
 			.to("#project-5", { x: 760, y: 0, duration: 0.5 })
 			.to("#project-6", { x: 760, y: 0, duration: 0.4 })
 			.to("#project-7", { x: 760, y: 0, duration: 0.3 })
-			.to("#project-8", { x: 760, y: 0, duration: 0.3 })
-			.to("#project-9", { x: 760, y: 100, duration: 0.5 })
-			.to("#project-10", { x: 760, y: 100, duration: 0.3 });
+			.to("#project-8", { x: 760, y: 300, duration: 0.3 })
+			.to("#project-9", { x: 760, y: 100, duration: 0.5 });
 		const observer = new IntersectionObserver(([entry]) => {
 			if (entry.isIntersecting) {
 				tl.current.reverse();
@@ -47,6 +47,7 @@ const Portfolio = () => {
 						.map((project, i) => {
 							return (
 								<ProjectButton
+									key={i}
 									id={`project-${i}`}
 									title={project.title}
 									image={project.image}
@@ -59,6 +60,7 @@ const Portfolio = () => {
 							);
 						})}
 			</Main>
+			<Art />
 		</Container>
 	);
 };

@@ -96,7 +96,7 @@ const ContactModal = ({ active, onCloseModal }) => {
 						variant="outlined"
 						name="message"
 						multiline
-						rows={16}
+						minRows={16}
 						helperText="Please enter your message here"
 						onChange={handleMessage}
 					/>

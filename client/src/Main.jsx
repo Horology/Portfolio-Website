@@ -23,7 +23,6 @@ const Main = () => {
 						/>
 					}
 				/>
-				<Route path="/art/" element={<Art />} />
 				<Route path="/code/" element={<Code />} />
 			</Routes>
 			<Footer />
