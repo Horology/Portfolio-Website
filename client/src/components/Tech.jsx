@@ -16,6 +16,7 @@ const Skills = () => {
 		if (carouselRef.current && containerRef.current) {
 			const animate = () => {
 				const carousel = carouselRef.current;
+				if (!carousel) return;
 				const scrollLeft = carousel.scrollLeft;
 				const itemWidth = parseInt(
 					getComputedStyle(carousel.children[0]).width

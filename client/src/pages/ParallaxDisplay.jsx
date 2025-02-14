@@ -55,3 +55,23 @@ const Container = styled.div`
 	height: 150vh;
 	width: 100%;
 `;
+
+// `"@material-ui/core": "^4.12.3",
+// "@mui/icons-material": "^5.1.0",
+// "@testing-library/react": "^11.2.7",
+// "@testing-library/user-event": "^12.8.3",
+// "axios": "^0.24.0",
+// "gsap": "^3.12.7",
+// "moment": "^2.29.1",
+// "react": "^17.0.2",
+// "react-dom": "^17.0.2",
+// "react-file-base64": "^1.0.3",
+// "react-icons": "^4.3.1",
+// "react-parallax": "^3.5.1",
+// "react-redux": "^7.2.6",
+// "react-router": "^6.0.2",
+// "react-router-dom": "^6.0.2",
+// "react-router-hash-link": "^2.4.3",
+// "react-scripts": "^4.0.3",
+// "react-scroll": "^1.8.5",
+// "styled-components": "^5.3.10"`
