@@ -3,24 +3,39 @@ import { BsFillDoorClosedFill, BsFillDoorOpenFill } from "react-icons/bs";
 import { AiFillGithub } from "react-icons/ai";
 import styled from "styled-components";
 
-export default function ProjectButton({ title, git, image, link, date, tech }) {
+export default function ProjectButton({
+	id,
+	title,
+	git,
+	// image,
+	link,
+	date,
+	tech,
+}) {
 	const [show, setShow] = useState(false);
+	const [hovered, setHovered] = useState(false);
 
 	return (
-		<Container>
-			<Image>
-				<Img src={image} alt="thumbnail-img" />
-			</Image>
+		<Container
+			id={id}
+			onMouseEnter={() => setHovered(true)}
+			onMouseLeave={() => setHovered(false)}
+		>
+			{/* {image && (
+				<Image>
+					<Img src={image} alt="thumbnail-img" />
+				</Image>
+			)} */}
 			<h3> {title}</h3>
 			<div> {date}</div>
-			<Tech>
+			<Tech hovered={hovered}>
 				{tech.map((t) => {
 					return <div>{t}</div>;
 				})}
 			</Tech>
 			<URL>
 				<a href={git}>
-					<AiFillGithub size={30} />
+					<AiFillGithub size={20} />
 				</a>
 				<a
 					href={link}
@@ -32,9 +47,9 @@ export default function ProjectButton({ title, git, image, link, date, tech }) {
 					}}
 				>
 					{show && show ? (
-						<BsFillDoorOpenFill size={30} />
+						<BsFillDoorOpenFill size={20} />
 					) : (
-						<BsFillDoorClosedFill size={30} />
+						<BsFillDoorClosedFill size={20} />
 					)}
 				</a>
 			</URL>
@@ -60,7 +75,7 @@ const Container = styled.div`
 	}
 
 	div {
-		font-size: 14px;
+		font-size: 12px;
 	}
 
 	&:hover {
@@ -94,7 +109,7 @@ const Tech = styled.div`
 		padding: 0 0.2rem;
 		border-radius: 0.5rem;
 	}
-	overflow: hidden;
+	overflow: ${({ hovered }) => (hovered ? "visible" : "hidden")};
 `;
 
 const URL = styled.div`
@@ -102,23 +117,23 @@ const URL = styled.div`
 	padding: 6px;
 `;
 
-const Image = styled.div`
-	position: relative;
-	overflow: hidden;
-	width: 100%;
-	height: 5rem;
-	display: flex;
-	justify-content: center;
+// const Image = styled.div`
+// 	position: relative;
+// 	overflow: hidden;
+// 	width: 100%;
+// 	height: 5rem;
+// 	display: flex;
+// 	justify-content: center;
 
-	&:hover {
-		opacity: 0.8;
-	}
-`;
+// 	&:hover {
+// 		opacity: 0.8;
+// 	}
+// `;
 
-const Img = styled.img`
-	width: 100%;
-	height: 100%;
-	object-fit: contain;
-	opacity: 1;
-	filter: invert(100%);
-`;
+// const Img = styled.img`
+// 	width: 100%;
+// 	height: 100%;
+// 	object-fit: contain;
+// 	opacity: 1;
+// 	filter: invert(100%);
+// `;

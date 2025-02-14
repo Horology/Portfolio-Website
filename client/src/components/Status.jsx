@@ -6,9 +6,9 @@ import styled from "styled-components";
 
 const paragraphs = [
 	{
-		title: "Experience",
+		title: "Experiences",
 		description:
-			"Programmed autonomous robots as an undergraduate. Currently working as a Fullstack Developer using Python, Bash, Docker, and Javascript ( React)",
+			"Programmed autonomous robots as an undergraduate. Currently working as a Fullstack Developer using Python, Bash, Docker, and Javascript",
 		icon: <AiOutlineRead size={45} />,
 	},
 	{
@@ -20,7 +20,7 @@ const paragraphs = [
 	{
 		title: "Hobbies",
 		description:
-			"Learned enough Japanese and Korean to communicate with locals. Loves to draw. Love playing with Blender, AutoCAD, Solidworks, and Photoshop",
+			"Learning to read and speak in Japanese and Korean. Loves to draw digitally and play electric guitar",
 		icon: <MdDraw size={45} />,
 	},
 ];
@@ -81,7 +81,7 @@ const Details = styled.div`
 const Card = styled.div`
 	cursor: pointer;
 	position: relative;
-	margin: 0 1rem;
+	margin: 0.5rem 1rem;
 	background-color: var(--highlighted-background);
 	min-height: 350px;
 	opacity: 0.75;

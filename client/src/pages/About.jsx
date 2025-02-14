@@ -7,7 +7,6 @@ import { useEffect, useRef, useState } from "react";
 const About = () => {
 	const ref = useRef();
 	const [isIntersecting, setIsIntersecting] = useState(false);
-	const [transition, setTransition] = useState(false);
 
 	useEffect(() => {
 		const observer = new IntersectionObserver(([entry]) => {
@@ -25,18 +24,10 @@ const About = () => {
 		return () => observer.disconnect();
 	}, []);
 
-	useEffect(() => {
-		if (isIntersecting) {
-			setTransition(true);
-		} else {
-			setTransition(false);
-		}
-	}, [isIntersecting]);
-
 	return (
 		<Container ref={ref} id="about">
 			<Introduction>
-				<Table transition={transition}>
+				<Table transition={isIntersecting}>
 					<Row>
 						<Label>Name</Label>
 						<Description>Hou Chong Chan</Description>
