@@ -1,5 +1,5 @@
 import React from "react";
-import Main from "./Main";
+import Main from "./Main.tsx";
 import "./styles/index.css";
 import { HashRouter } from "react-router-dom";
 import isPropValid from "@emotion/is-prop-valid";

@@ -1,17 +1,16 @@
-// import aboutme_descriptions from "../constants/aboutme_descriptions";
-import Status from "../components/Status";
+import Status from "../components/Status.tsx";
 import socialLinks from "../configs/social_links";
 import styled from "styled-components";
-import { useEffect, useRef, useState } from "react";
+import React, {FC, PropsWithChildren, useEffect, useRef, useState } from "react";
 
-const About = () => {
-	const ref = useRef();
+const About: FC<PropsWithChildren> = () => {
+	const ref = useRef<HTMLElement>(null!);
 	const [isIntersecting, setIsIntersecting] = useState(false);
 
 	useEffect(() => {
 		const observer = new IntersectionObserver(([entry]) => {
 			if (entry.isIntersecting) {
-				ref.current.scrollIntoView({
+				ref.current?.scrollIntoView({
 					behavior: "smooth",
 				});
 				setIsIntersecting(true);

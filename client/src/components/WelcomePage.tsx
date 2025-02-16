@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, FC, PropsWithChildren } from "react";
 import { GrCaretDown } from "react-icons/gr";
 import { HashLink } from "react-router-hash-link";
-import { Button } from "./CSSComponents";
+import { Button } from "./CSSComponents.tsx";
 
-const WelcomePage = () => {
+const WelcomePage: FC<PropsWithChildren>  = () => {
 	const [displayedText, setDisplayedText] = useState("");
 	const [position, setPosition] = useState(0);
 

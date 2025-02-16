@@ -1,14 +1,14 @@
-import React from "react";
+import React, { FC, PropsWithChildren } from "react";
 import styled from "styled-components";
-import project_links from "../configs/project_links";
-import ProjectButton from "./ProjectButton";
+import project_links from "../configs/project_links.js";
+import ProjectButton from "./ProjectButton.tsx";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import Art from "./Art";
+import Art from "./Art.tsx";
 
-const Portfolio = () => {
-	const ref = useRef();
-	const tl = useRef();
+const Portfolio: FC<PropsWithChildren> = () => {
+	const ref = useRef<HTMLElement>(null!);
+	const tl = useRef(null!);
 
 	useEffect(() => {
 		tl.current = gsap

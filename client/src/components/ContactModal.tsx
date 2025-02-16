@@ -1,7 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, FC, PropsWithChildren } from "react";
 import { Box, Grid, TextField } from "@mui/material";
 import styled from "styled-components";
 import { ImCross } from "react-icons/im";
+
+interface Props {
+	active: boolean;
+	onCloseModal: () => void;
+}
 
 const initialForm = {
 	firstName: "",
@@ -10,18 +15,18 @@ const initialForm = {
 	message: "",
 };
 
-const ContactModal = ({ active, onCloseModal }) => {
+const ContactModal: FC<PropsWithChildren<Props>> = ({ active, onCloseModal }) => {
 	const [message, setMessage] = useState(initialForm);
 	const [helperMessage, setHelperMessage] = useState("");
 
-	const handleMessage = (e) => {
+	const handleMessage = (e: React.ChangeEvent<HTMLInputElement >) => {
 		e.preventDefault();
 		const tempMessage = { ...message };
 		tempMessage[e.target.name] = e.target.value;
 		setMessage(tempMessage);
 	};
 
-	const handleSubmit = (e) => {
+	const handleSubmit = (e: MouseEvent) => {
 		e.preventDefault();
 		if (!/.+@.+\.[A-Za-z]+$/.test(message["email"])) {
 			setHelperMessage("Please enter a valid email ");
@@ -31,7 +36,7 @@ const ContactModal = ({ active, onCloseModal }) => {
 		setMessage(initialForm);
 	};
 
-	const onKeyPress = (e) => {
+	const onKeyPress = (e: KeyboardEvent) => {
 		if (e.keyCode === 27) {
 			onCloseModal();
 		}

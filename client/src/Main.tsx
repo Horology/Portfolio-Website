@@ -1,12 +1,13 @@
+import React, { useState, FC, PropsWithChildren } from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Code from "./pages/Code";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Home from "./pages/Home.tsx";
+import Code from "./pages/Code.tsx";
+import Navbar from "./components/Navbar.tsx";
+import Footer from "./components/Footer.tsx";
 import styled from "styled-components";
-import { useState } from "react";
 
-const Main = () => {
+
+const Main: FC<PropsWithChildren> = () => {
 	const [showModal, setShowModal] = useState(false);
 
 	return (

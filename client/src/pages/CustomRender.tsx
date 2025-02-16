@@ -1,7 +1,16 @@
 import styled from "styled-components";
 import { ReactComponent as HouIcon } from "../components/img/hou.svg";
+import React, { FC, PropsWithChildren } from "react";
 
-const CustomRender = ({ percentage, width, number, multiplier, opacity }) => {
+interface Props {
+	percentage: number;
+	width: number; 
+	number: number; 
+	multipler: number;
+	opacity: number; 
+}
+
+const CustomRender: FC<PropsWithChildren<Props>>= ({ percentage, width, number, multiplier, opacity }) => {
 	if (number < 0)
 		return (
 			<Wrapper>

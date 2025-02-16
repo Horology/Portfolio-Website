@@ -1,9 +1,17 @@
-import React, { useState } from "react";
+import React, { FC, PropsWithChildren, useState } from "react";
 import { BsFillDoorClosedFill, BsFillDoorOpenFill } from "react-icons/bs";
 import { AiFillGithub } from "react-icons/ai";
 import styled from "styled-components";
 
-export default function ProjectButton({ id, title, git, link, date, tech }) {
+interface Props { 
+	id: string; 
+	title: string; 
+	git: string; 
+	link: string; date: string; 
+	tech: string[];
+}
+
+ const ProjectButton: FC<PropsWithChildren<Props>> = ({ id, title, git, link, date, tech }) => {
 	const [show, setShow] = useState(false);
 	const [hovered, setHovered] = useState(false);
 
@@ -43,6 +51,8 @@ export default function ProjectButton({ id, title, git, link, date, tech }) {
 		</Container>
 	);
 }
+
+export default ProjectButton
 
 const Container = styled.div`
 	position: relative;

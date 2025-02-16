@@ -1,7 +1,7 @@
-import React from "react";
+import React, { FC, PropsWithChildren } from "react";
 import styled from "styled-components";
 
-const Art = () => {
+const Art: FC<PropsWithChildren> = () => {
 	return (
 		<Container>
 			<P>

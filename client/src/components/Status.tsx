@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC, PropsWithChildren } from "react";
 import { MdDraw } from "react-icons/md";
 import { BiCodeAlt } from "react-icons/bi";
 import { AiOutlineRead } from "react-icons/ai";
@@ -25,7 +25,7 @@ const paragraphs = [
 	},
 ];
 
-const Status = () => {
+const Status: FC<PropsWithChildren> = () => {
 	return (
 		<Container>
 			<Details>

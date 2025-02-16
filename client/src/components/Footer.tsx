@@ -1,7 +1,8 @@
+import React, { FC, PropsWithChildren } from "react";
 import socialLinks from "../configs/social_links";
 import styled from "styled-components";
 
-const Footer = () => {
+const Footer: FC<PropsWithChildren> = () => {
 	return (
 		<Container>
 			<SocialLinks>

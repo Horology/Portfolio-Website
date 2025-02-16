@@ -1,12 +1,12 @@
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, FC } from "react";
 import { data } from "./svgs/SVGIcons";
-import Description from "./Description";
+import Description from "./Description.tsx";
 import styled from "styled-components";
 
-const Skills = () => {
-	const carouselRef = useRef();
-	const containerRef = useRef();
-	const timerRef = useRef();
+const Tech: FC = () => {
+	const carouselRef = useRef<HTMLElement>(null!);
+	const containerRef = useRef<HTMLElement>(null);
+	const timerRef = useRef<number>(null!);
 	const [items, setItems] = useState([...data]);
 	const [itemId, setItemId] = useState(-1);
 	const [hovered, setHovered] = useState(false);
@@ -83,7 +83,7 @@ const Skills = () => {
 	);
 };
 
-export default Skills;
+export default Tech;
 
 const Title = styled.h2`
 	color: var(--dim-yellow);
